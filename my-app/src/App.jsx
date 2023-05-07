@@ -1,35 +1,95 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState} from 'react';
+import reactLogo from './assets/react.svg';
+import esFlag from './assets/Flag_of_Spain.svg';
+import seFlag from './assets/Flag_of_Sweden.svg';
+import viteLogo from '/vite.svg';
+import {
+  GlobalStyles,
+  Grid,
+  Paper,
+  Box,
+  SvgIcon,
+  ThemeProvider,
+  Typography,
+  createTheme,
+  Button,
+} from '@mui/material';
+import {themeOptions} from './theme/themeOptions';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ThemeProvider theme={createTheme(themeOptions)}>
+        <Paper
+          elevation={7}
+          sx={{
+            height: '50vh',
+            minWidth: '20vw',
+            maxWidth: '50vw',
+            backgroundColor: 'primary.dark',
+            m: 'auto',
+            mt: 15,
+            mb: 15,
+          }}
+        >
+          <Paper elevation={0}>
+            <Grid
+              container
+              flexDirection={'column'}
+              alignItems={'center'}
+              sx={{
+                backgroundColor: 'primary.main',
+                p: 2,
+                gap: 2,
+              }}
+            >
+              <Grid item sx={{p: 1}}>
+                <Typography component="h1" variant="h1">
+                  KEEL
+                </Typography>
+              </Grid>
+              <Grid item sx={{p: 1}}>
+                <Typography component="h2" variant="h2">
+                  A language learning game
+                </Typography>
+              </Grid>
+              <Grid item sx={{p: 1}}>
+                <Typography component="p">Select a language</Typography>
+              </Grid>
+              <Grid
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 2,
+                  p: 1,
+                }}
+              >
+                <Grid sx={{width: '60px'}}>
+                  <Button>
+                    <img
+                      style={{maxWidth: '100%', maxHeight: '100%'}}
+                      src={esFlag}
+                      alt="flag of Spain"
+                    />
+                  </Button>
+                </Grid>
+                <Grid sx={{width: '60px'}}>
+                  <Button>
+                    <img
+                      style={{maxWidth: '100%', maxHeight: '100%'}}
+                      src={seFlag}
+                      alt="flag of Sweden"
+                    />
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Paper>
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
