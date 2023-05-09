@@ -67,30 +67,27 @@ const pickNextBox = () => {
   }
 };
 
-const Game = () => {
-  let [roundsState, setRoundsState] = useState(0);
+// TÄÄLT APUU: https://stackoverflow.com/questions/46775233/how-to-render-a-component-on-button-click-in-react
 
-  if (roundsState == 0) {
-    useEffect(() => {
-      setRoundsState(roundsState++);
-    }, []);
-    return <Box>{pickNextBox()}</Box>;
-  } else if (answer == word[0]) {
-    useEffect(() => {
-      setRoundsState(roundsState++);
-    }, []);
-    console.log('word: ', word[0]);
-    console.log('answer: ', answer);
-    console.log('randIndex: ', randIndex);
-    randIndex = Math.floor(Math.random() * (wordData.length - 1) + 1);
-    word = wordData[randIndex].word.split(' ');
+const viewBox = () => {
+  this.state = {
+    type: 'articleBox',
+  };
 
-    // TODO: arvotaan seuraava laatikko
-    nextBox = 'articleBox';
-    rounds++;
-    console.log(rounds);
-    return <Box>{pickNextBox()}</Box>;
+  this.boxToRender = null;
+
+  switch (this.state.type) {
+    case 'articleBox':
+      this.boxToRender = pickNextBox();
+    case 'caseBox':
+      this.boxToRender = caseBox();
   }
+
+  return boxToRender;
+};
+
+const Game = () => {
+  return <>{viewBox()}</>;
 };
 
 export default Game;
