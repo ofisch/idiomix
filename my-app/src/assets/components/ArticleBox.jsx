@@ -1,17 +1,15 @@
 import {Button, Grid, Paper, TextField, Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
+let answer = ' ';
+
 const ArticleBox = ({questionWord, questionArticle}) => {
   // 'buttons' tai 'type'
   let variant = 'buttons';
 
-  const handleAnswer = (answer) => {
-    return answer;
-  };
-
   if (variant == 'buttons') {
     return (
-      <Paper elevation={7} sx={{width: '50%', m: 'auto'}}>
+      <Paper sx={{width: '50%', m: 'auto'}}>
         <Grid
           display={'flex'}
           flexDirection={'column'}
@@ -21,39 +19,6 @@ const ArticleBox = ({questionWord, questionArticle}) => {
           <Typography component="h1" variant="h2">
             {questionWord}
           </Typography>
-          <Grid
-            display={'flex'}
-            flexWrap={'wrap'}
-            justifyContent={'space-between'}
-            gap={2}
-            sx={{height: '100%', p: 2}}
-          >
-            <Paper elevation={5}>
-              <Button
-                variant="text"
-                onClick={() => {
-                  handleAnswer('un');
-                }}
-              >
-                <Typography component="h4" variant="h4">
-                  un
-                </Typography>
-              </Button>
-            </Paper>
-
-            <Paper elevation={5} sx={{}}>
-              <Button
-                variant="text"
-                onClick={() => {
-                  handleAnswer('una');
-                }}
-              >
-                <Typography component="h4" variant="h4">
-                  una
-                </Typography>
-              </Button>
-            </Paper>
-          </Grid>
         </Grid>
       </Paper>
     );
@@ -84,3 +49,4 @@ const ArticleBox = ({questionWord, questionArticle}) => {
 };
 
 export default ArticleBox;
+export {answer};
