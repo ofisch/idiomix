@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "word": "un carro",
+    "type": "article"
+  },
+  {
+    "id": 2,
+    "word": "un perro",
+    "type": "article"
+  },
+  {
+    "id": 3,
+    "word": "una llave",
+    "type": "article"
+  },
+  {
+    "id": 4,
+    "word": "una ensalada",
+    "type": "article"
+  },
+  {
+    "id": 5,
+    "word": "un restaurante",
+    "type": "article"
+  },
+  {
+    "id": 6,
+    "word": "una guitarra",
+    "type": "article"
+  }
+]
