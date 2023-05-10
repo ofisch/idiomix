@@ -6,88 +6,54 @@ import wordData from '../src/assets/EsWords.json';
 import ArticleBox from '../src/assets/components/ArticleBox';
 import {Box, Button, Grid, Paper, Stack, Typography} from '@mui/material';
 
-let rounds = 0;
-let answer = '';
+const Game = () => {
+  const [showFinalResults, setFinalResults] = useState(false);
+  const [score, setScore] = useState(0);
+  const [currentQuestion, setQurrentQuestion] = useState(0);
 
-// artikkeliBoksin sana
-let randIndex = Math.floor(Math.random() * (wordData.length - 1) + 1);
-let word = wordData[randIndex].word.split(' ');
-console.log('sana: ', word);
-
-const pickNextBox = () => {
-  let nextBox = 'articleBox';
-
-  if (nextBox == 'articleBox') {
-    return (
-      <>
-        <Paper elevation={7} sx={{minWidth: '50%', maxWidth: '55%', m: 'auto'}}>
-          <ArticleBox
-            questionWord={word[1]}
-            questionArticle={word[0]}
-          ></ArticleBox>
-          <Grid
-            display={'flex'}
-            flexWrap={'wrap'}
-            justifyContent={'space-evenly'}
-            sx={{height: '100%', p: 2, ml: '25%', mr: '25%'}}
-          >
-            <Paper elevation={5}>
-              <Button
-                variant="text"
-                onClick={() => {
-                  answer = 'un';
-                  console.log('vastaus: ', answer);
-                }}
-              >
-                <Typography component="h4" variant="h4">
-                  un
-                </Typography>
-              </Button>
-            </Paper>
-
-            <Paper elevation={5} sx={{}}>
-              <Button
-                variant="text"
-                onClick={() => {
-                  answer = 'una';
-                  console.log('vastaus: ', answer);
-                }}
-              >
-                <Typography component="h4" variant="h4">
-                  una
-                </Typography>
-              </Button>
-            </Paper>
-          </Grid>
-        </Paper>
-      </>
-    );
-  } else if (nextBox == 'caseBox') {
-    return <Paper elevation={3}>caseBox</Paper>;
-  }
-};
-
-// TÄÄLT APUU: https://stackoverflow.com/questions/46775233/how-to-render-a-component-on-button-click-in-react
-
-const viewBox = () => {
-  this.state = {
-    type: 'articleBox',
+  const getRandIndex = () => {
+    return Math.floor(Math.random() * (wordData.length - 1) + 1);
   };
 
-  this.boxToRender = null;
+  let [questionWord, setQuestionWord] = useState('');
+  let [answer, setAnswer] = useState('');
 
-  switch (this.state.type) {
-    case 'articleBox':
-      this.boxToRender = pickNextBox();
-    case 'caseBox':
-      this.boxToRender = caseBox();
-  }
+  // setQuestionWord((questionWord = wordData[getRandIndex()].word.split(' ')));
 
-  return boxToRender;
-};
+  questionWord = wordData[getRandIndex()].word.split(' ');
 
-const Game = () => {
-  return <>{viewBox()}</>;
+  questionWord = wordData[getRandIndex()].word.split(' ');
+
+  console.log(questionWord);
+
+  const optionClicked = (userAnswer) => {
+    setAnswer((answer = userAnswer));
+    if (answer == questionWord[0]) {
+      setScore(score + 1);
+    }
+  };
+
+  return (
+    <>
+      <Typography variant="h1">Idiomix</Typography>
+      <Typography variant="h2">Current score: {score}</Typography>
+
+      {showFinalResults ? (
+        <Paper elevation={5}>
+          <Typography variant="h2">Final results:</Typography>
+          <Typography variant="h3">moi miten menee</Typography>
+          <Button>Restart</Button>
+        </Paper>
+      ) : (
+        <Paper elevation={5}>
+          <Typography variant="h2">haha xd</Typography>
+          <Typography variant="h3">{`${questionWord[1]}`}</Typography>
+          <Button onClick={() => optionClicked('un')}>un</Button>
+          <Button onClick={() => optionClicked('una')}>una</Button>
+        </Paper>
+      )}
+    </>
+  );
 };
 
 export default Game;
