@@ -3,49 +3,77 @@
     "id": 1,
     "word": "carro",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "true"},
-    {"article": "una", "isCorrect": "false"}]
+    "answer": [{"article": "un", "isCorrect": true},
+    {"article": "una", "isCorrect": false}]
   },
   {
     "id": 2,
     "word": "perro",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "true"},
-    {"article": "una", "isCorrect": "false"}]
+    "answer": [{"article": "un", "isCorrect": true},
+    {"article": "una", "isCorrect": false}]
   },
   {
     "id": 3,
     "word": "llave",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "false"},
-    {"article": "una", "isCorrect": "true"}]
+    "answer": [{"article": "un", "isCorrect": false},
+    {"article": "una", "isCorrect": true}]
   },
   {
     "id": 4,
     "word": "ensalada",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "false"},
-    {"article": "una", "isCorrect": "true"}]
+    "answer": [{"article": "un", "isCorrect": false},
+    {"article": "una", "isCorrect": true}]
   },
   {
     "id": 5,
     "word": "restaurante",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "true"},
-    {"article": "una", "isCorrect": "false"}]
+    "answer": [{"article": "un", "isCorrect": true},
+    {"article": "una", "isCorrect": false}]
   },
   {
     "id": 6,
     "word": "guitarra",
     "type": "article",
-    "answer": [{"article": "un", "isCorrect": "false"},
-    {"article": "una", "isCorrect": "true"}]
+    "answer": [{"article": "un", "isCorrect": false},
+    {"article": "una", "isCorrect": true}]
   },
   {
     "id": 7,
     "word": "yo",
     "type": "case",
-    "answer": [{"article": "tengo", "isCorrect": "true"},
-    {"article": "tener", "isCorrect": "false"}]
+    "answer": [{"article": "tengo", "isCorrect": true},
+    {"article": "tener", "isCorrect": false}]
+  },
+  {
+    "id": 8,
+    "word": "yo",
+    "type": "case",
+    "answer": [{"article": "eres", "isCorrect": false},
+    {"article": "soy", "isCorrect": true}]
+  },
+  {
+    "id": 9,
+    "word": "tú",
+    "type": "case",
+    "answer": [{"article": "eres", "isCorrect": true},
+    {"article": "somos", "isCorrect": false}]
+  },
+  {
+    "id": 10,
+    "word": "vosotros",
+    "type": "case",
+    "answer": [{"article": "sois", "isCorrect": true},
+    {"article": "somos", "isCorrect": false}]
+  },
+  {
+    "id": 11,
+    "word": "nosotros",
+    "type": "case",
+    "answer": [{"article": "somos", "isCorrect": true},
+    {"article": "son", "isCorrect": false}]
   }
 ]
