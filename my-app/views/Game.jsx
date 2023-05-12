@@ -54,8 +54,9 @@ const Game = () => {
   let [showTheAnswer, setShowTheAnswer] = useState('');
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-  let article;
+
   const showCorrectAnswer = async () => {
+    let article;
     questionWord.answer[0].isCorrect
       ? (article = questionWord.answer[0].article)
       : (article = questionWord.answer[1].article);
@@ -101,6 +102,7 @@ const Game = () => {
             justifyContent={'center'}
           >
             <Button
+              disabled
               variant="text"
               onClick={() => optionClicked(questionWord.answer[0].article)}
             >
@@ -109,6 +111,7 @@ const Game = () => {
               </Typography>
             </Button>
             <Button
+              disabled
               variant="text"
               onClick={() => optionClicked(questionWord.answer[1].article)}
             >
