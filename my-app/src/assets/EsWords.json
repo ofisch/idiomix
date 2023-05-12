@@ -1,32 +1,51 @@
 [
   {
     "id": 1,
-    "word": "un carro",
-    "type": "article"
+    "word": "carro",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "true"},
+    {"article": "una", "isCorrect": "false"}]
   },
   {
     "id": 2,
-    "word": "un perro",
-    "type": "article"
+    "word": "perro",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "true"},
+    {"article": "una", "isCorrect": "false"}]
   },
   {
     "id": 3,
-    "word": "una llave",
-    "type": "article"
+    "word": "llave",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "false"},
+    {"article": "una", "isCorrect": "true"}]
   },
   {
     "id": 4,
-    "word": "una ensalada",
-    "type": "article"
+    "word": "ensalada",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "false"},
+    {"article": "una", "isCorrect": "true"}]
   },
   {
     "id": 5,
-    "word": "un restaurante",
-    "type": "article"
+    "word": "restaurante",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "true"},
+    {"article": "una", "isCorrect": "false"}]
   },
   {
     "id": 6,
-    "word": "una guitarra",
-    "type": "article"
+    "word": "guitarra",
+    "type": "article",
+    "answer": [{"article": "un", "isCorrect": "false"},
+    {"article": "una", "isCorrect": "true"}]
+  },
+  {
+    "id": 7,
+    "word": "yo",
+    "type": "case",
+    "answer": [{"article": "tengo", "isCorrect": "true"},
+    {"article": "tener", "isCorrect": "false"}]
   }
 ]

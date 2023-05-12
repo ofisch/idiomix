@@ -3,13 +3,13 @@ import React, {useEffect, useState} from 'react';
 
 let answer = ' ';
 
-const ArticleBox = ({questionWord, questionArticle}) => {
+const ArticleBox = ({word, article}) => {
   // 'buttons' tai 'type'
   let variant = 'buttons';
 
   if (variant == 'buttons') {
     return (
-      <Paper sx={{width: '50%', m: 'auto'}}>
+      <Paper sx={{maxWidth: '70%', m: 'auto'}}>
         <Grid
           display={'flex'}
           flexDirection={'column'}
@@ -17,7 +17,7 @@ const ArticleBox = ({questionWord, questionArticle}) => {
           sx={{p: 2}}
         >
           <Typography component="h1" variant="h2">
-            {questionWord}
+            {word}
           </Typography>
         </Grid>
       </Paper>

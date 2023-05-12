@@ -18,25 +18,37 @@ const Game = () => {
   let [questionWord, setQuestionWord] = useState('');
   let [answer, setAnswer] = useState('');
 
-  // setQuestionWord((questionWord = wordData[getRandIndex()].word.split(' ')));
+  questionWord = wordData[getRandIndex()];
 
-  questionWord = wordData[getRandIndex()].word.split(' ');
+  wordData[0].answer[0].article;
 
-  questionWord = wordData[getRandIndex()].word.split(' ');
+  const checkCorrectAnswer = () => {
+    let correctAnswer;
 
-  console.log(questionWord);
+    for (let i of questionWord.answer) {
+      if (i.isCorrect == 'true') {
+        correctAnswer = i.article;
+      }
+    }
+
+    if (answer == correctAnswer) {
+      setScore(score + 1);
+    } else {
+      setScore(score - 1);
+    }
+  };
 
   const optionClicked = (userAnswer) => {
     setAnswer((answer = userAnswer));
-    if (answer == questionWord[0]) {
-      setScore(score + 1);
-    }
+
+    checkCorrectAnswer();
   };
 
   return (
     <>
-      <Typography variant="h1">Idiomix</Typography>
-      <Typography variant="h2">Current score: {score}</Typography>
+      <Typography component="h1" variant="h2">
+        Current score: {score}
+      </Typography>
 
       {showFinalResults ? (
         <Paper elevation={5}>
@@ -45,11 +57,24 @@ const Game = () => {
           <Button>Restart</Button>
         </Paper>
       ) : (
-        <Paper elevation={5}>
-          <Typography variant="h2">haha xd</Typography>
-          <Typography variant="h3">{`${questionWord[1]}`}</Typography>
-          <Button onClick={() => optionClicked('un')}>un</Button>
-          <Button onClick={() => optionClicked('una')}>una</Button>
+        <Paper elevation={5} sx={{width: '50%', m: 'auto'}}>
+          <ArticleBox word={questionWord.word}></ArticleBox>
+          <Grid
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'center'}
+          >
+            <Button
+              onClick={() => optionClicked(questionWord.answer[0].article)}
+            >
+              {questionWord.answer[0].article}
+            </Button>
+            <Button
+              onClick={() => optionClicked(questionWord.answer[1].article)}
+            >
+              {questionWord.answer[1].article}
+            </Button>
+          </Grid>
         </Paper>
       )}
     </>
