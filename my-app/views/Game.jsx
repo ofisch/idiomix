@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Start from './Start';
+import '../src/App.css';
 
 import {selectedLang} from '../hooks/infoHooks';
 import esWords from '../src/assets/EsWords.json';
@@ -101,9 +102,6 @@ const Game = () => {
     <>
       <ThemeProvider theme={createTheme(themeOptions)}>
         <CssBaseline></CssBaseline>
-        <Typography component="h1" variant="h2">
-          Current score: {score}
-        </Typography>
 
         {showFinalResults ? (
           <Paper elevation={5}>
@@ -114,13 +112,22 @@ const Game = () => {
         ) : answerTrue ? (
           <Paper
             elevation={5}
-            sx={{width: '50%', m: 'auto', backgroundColor: 'green'}}
+            sx={{width: '50%', m: 'auto', mt: '35px', backgroundColor: 'green'}}
           >
+            <Typography
+              component="h1"
+              variant="h2"
+              textAlign={'center'}
+              sx={{p: 2}}
+            >
+              Current score: {score}
+            </Typography>
             <ArticleBox word={showTheAnswer}></ArticleBox>
             <Grid
               display={'flex'}
               flexDirection={'row'}
               justifyContent={'center'}
+              sx={{mt: 3}}
             >
               <Button
                 disabled
@@ -145,8 +152,21 @@ const Game = () => {
         ) : (
           <Paper
             elevation={5}
-            sx={{width: '50%', m: 'auto', backgroundColor: 'primary.main'}}
+            sx={{
+              width: '50%',
+              m: 'auto',
+              mt: '35px',
+              backgroundColor: 'primary.main',
+            }}
           >
+            <Typography
+              component="h1"
+              variant="h2"
+              textAlign={'center'}
+              sx={{p: 2}}
+            >
+              Current score: {score}
+            </Typography>
             <ArticleBox
               word={answerTrue ? showTheAnswer : questionWord.word}
             ></ArticleBox>
@@ -154,7 +174,7 @@ const Game = () => {
               display={'flex'}
               flexDirection={'row'}
               justifyContent={'center'}
-              sx={{backgroundColor: 'primary.dark'}}
+              sx={{backgroundColor: 'primary.dark', mt: 3}}
             >
               <Button
                 sx={{color: 'primary.light'}}

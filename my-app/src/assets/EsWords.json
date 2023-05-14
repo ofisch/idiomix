@@ -103,5 +103,61 @@
     "type": "conjugation",
     "answer": [{"article": "sois", "isCorrect": false},
     {"article": "es", "isCorrect": true}]
+  },
+  {
+    "id": 16,
+    "word": "yo",
+    "type": "conjugation",
+    "answer": [{"article": "puedo", "isCorrect": true},
+    {"article": "poder", "isCorrect": false}]
+  },
+  {
+    "id": 17,
+    "word": "tú",
+    "type": "conjugation",
+    "answer": [{"article": "puedes", "isCorrect": true},
+    {"article": "puedo", "isCorrect": false}]
+  },
+  {
+    "id": 18,
+    "word": "él",
+    "type": "conjugation",
+    "answer": [{"article": "puedes", "isCorrect": false},
+    {"article": "puede", "isCorrect": true}]
+  },
+  {
+    "id": 19,
+    "word": "ella",
+    "type": "conjugation",
+    "answer": [{"article": "puedes", "isCorrect": false},
+    {"article": "puede", "isCorrect": true}]
+  },
+  {
+    "id": 20,
+    "word": "nosotros",
+    "type": "conjugation",
+    "answer": [{"article": "podemos", "isCorrect": true},
+    {"article": "pueden", "isCorrect": false}]
+  },
+  {
+    "id": 21,
+    "word": "vosotros",
+    "type": "conjugation",
+    "answer": [{"article": "podéis", "isCorrect": true},
+    {"article": "puede", "isCorrect": false}]
+  },
+  {
+    "id": 22,
+    "word": "ellos",
+    "type": "conjugation",
+    "answer": [{"article": "pueden", "isCorrect": true},
+    {"article": "puede", "isCorrect": false}]
+  },
+  {
+    "id": 23,
+    "word": "ellas",
+    "type": "conjugation",
+    "answer": [{"article": "podemos", "isCorrect": false},
+    {"article": "pueden", "isCorrect": true}]
   }
 ]
