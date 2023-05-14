@@ -44,36 +44,64 @@
   {
     "id": 7,
     "word": "yo",
-    "type": "case",
+    "type": "conjugation",
     "answer": [{"article": "tengo", "isCorrect": true},
     {"article": "tener", "isCorrect": false}]
   },
   {
     "id": 8,
     "word": "yo",
-    "type": "case",
+    "type": "conjugation",
     "answer": [{"article": "eres", "isCorrect": false},
     {"article": "soy", "isCorrect": true}]
   },
   {
     "id": 9,
     "word": "tú",
-    "type": "case",
+    "type": "conjugation",
     "answer": [{"article": "eres", "isCorrect": true},
     {"article": "somos", "isCorrect": false}]
   },
   {
     "id": 10,
     "word": "vosotros",
-    "type": "case",
+    "type": "conjugation",
     "answer": [{"article": "sois", "isCorrect": true},
     {"article": "somos", "isCorrect": false}]
   },
   {
     "id": 11,
     "word": "nosotros",
-    "type": "case",
+    "type": "conjugation",
     "answer": [{"article": "somos", "isCorrect": true},
     {"article": "son", "isCorrect": false}]
+  },
+  {
+    "id": 12,
+    "word": "ellos",
+    "type": "conjugation",
+    "answer": [{"article": "somos", "isCorrect": false},
+    {"article": "son", "isCorrect": true}]
+  },
+  {
+    "id": 13,
+    "word": "ellas",
+    "type": "conjugation",
+    "answer": [{"article": "somos", "isCorrect": false},
+    {"article": "son", "isCorrect": true}]
+  },
+  {
+    "id": 14,
+    "word": "él",
+    "type": "conjugation",
+    "answer": [{"article": "es", "isCorrect": true},
+    {"article": "son", "isCorrect": false}]
+  },
+  {
+    "id": 15,
+    "word": "ella",
+    "type": "conjugation",
+    "answer": [{"article": "sois", "isCorrect": false},
+    {"article": "es", "isCorrect": true}]
   }
 ]

@@ -4,7 +4,25 @@ import Start from './Start';
 import {selectedLang} from '../hooks/infoHooks';
 import esWords from '../src/assets/EsWords.json';
 import ArticleBox from '../src/assets/components/ArticleBox';
-import {Box, Button, Grid, Paper, Stack, Typography} from '@mui/material';
+import {
+  Box,
+  Button,
+  CssBaseline,
+  Grid,
+  Paper,
+  Stack,
+  ThemeProvider,
+  Typography,
+  createTheme,
+} from '@mui/material';
+import {themeOptions} from '../src/theme/themeOptions';
+import {green} from '@mui/material/colors';
+
+let optionsToDisplay = [];
+
+const options = {
+  speed: 2000,
+};
 
 const Game = () => {
   const [showFinalResults, setFinalResults] = useState(false);
@@ -26,7 +44,6 @@ const Game = () => {
   // haetaan satunnainen sana listasta
   if (selectedLang == 'es') {
     questionWord = esWords[getRandIndex()];
-    console.log('questionWord: ', questionWord);
   } else if (selectedLang == 'se') {
     console.log('ruotti kesken');
   }
@@ -62,16 +79,15 @@ const Game = () => {
       : (article = questionWord.answer[1].article);
     if (questionWord.type == 'article') {
       setShowTheAnswer((showTheAnswer = article + ' ' + questionWord.word));
-    } else if (questionWord.type == 'case') {
+    } else if (questionWord.type == 'conjugation') {
       setShowTheAnswer((showTheAnswer = questionWord.word + ' ' + article));
     }
 
-    await delay(2000);
-    setAnswerTrue((answerTrue = false));
-    console.log('word: ', questionWord.word);
-    console.log('article: ', questionWord.article);
+    optionsToDisplay.push(...questionWord.answer.slice(0, 2));
 
-    console.log('ootettu 2 sekkaa');
+    await delay(options.speed);
+    setAnswerTrue((answerTrue = false));
+    optionsToDisplay = [];
   };
 
   const optionClicked = (userAnswer) => {
@@ -83,73 +99,85 @@ const Game = () => {
 
   return (
     <>
-      <Typography component="h1" variant="h2">
-        Current score: {score}
-      </Typography>
+      <ThemeProvider theme={createTheme(themeOptions)}>
+        <CssBaseline></CssBaseline>
+        <Typography component="h1" variant="h2">
+          Current score: {score}
+        </Typography>
 
-      {showFinalResults ? (
-        <Paper elevation={5}>
-          <Typography variant="h2">Final results:</Typography>
-          <Typography variant="h3">moi miten menee</Typography>
-          <Button>Restart</Button>
-        </Paper>
-      ) : answerTrue ? (
-        <Paper elevation={5} sx={{width: '50%', m: 'auto'}}>
-          <ArticleBox word={showTheAnswer}></ArticleBox>
-          <Grid
-            display={'flex'}
-            flexDirection={'row'}
-            justifyContent={'center'}
+        {showFinalResults ? (
+          <Paper elevation={5}>
+            <Typography variant="h2">Final results:</Typography>
+            <Typography variant="h3">moi miten menee</Typography>
+            <Button>Restart</Button>
+          </Paper>
+        ) : answerTrue ? (
+          <Paper
+            elevation={5}
+            sx={{width: '50%', m: 'auto', backgroundColor: 'green'}}
           >
-            <Button
-              disabled
-              variant="text"
-              onClick={() => optionClicked(questionWord.answer[0].article)}
+            <ArticleBox word={showTheAnswer}></ArticleBox>
+            <Grid
+              display={'flex'}
+              flexDirection={'row'}
+              justifyContent={'center'}
             >
-              <Typography component="h4" variant="h4">
-                {questionWord.answer[0].article}
-              </Typography>
-            </Button>
-            <Button
-              disabled
-              variant="text"
-              onClick={() => optionClicked(questionWord.answer[1].article)}
-            >
-              <Typography component="h4" variant="h4">
-                {questionWord.answer[1].article}
-              </Typography>
-            </Button>
-          </Grid>
-        </Paper>
-      ) : (
-        <Paper elevation={5} sx={{width: '50%', m: 'auto'}}>
-          <ArticleBox
-            word={answerTrue ? showTheAnswer : questionWord.word}
-          ></ArticleBox>
-          <Grid
-            display={'flex'}
-            flexDirection={'row'}
-            justifyContent={'center'}
+              <Button
+                disabled
+                variant="text"
+                onClick={() => optionClicked(questionWord.answer[0].article)}
+              >
+                <Typography component="h4" variant="h4">
+                  {optionsToDisplay[0].article}
+                </Typography>
+              </Button>
+              <Button
+                disabled
+                variant="text"
+                onClick={() => optionClicked(questionWord.answer[1].article)}
+              >
+                <Typography component="h4" variant="h4">
+                  {optionsToDisplay[1].article}
+                </Typography>
+              </Button>
+            </Grid>
+          </Paper>
+        ) : (
+          <Paper
+            elevation={5}
+            sx={{width: '50%', m: 'auto', backgroundColor: 'primary.main'}}
           >
-            <Button
-              variant="text"
-              onClick={() => optionClicked(questionWord.answer[0].article)}
+            <ArticleBox
+              word={answerTrue ? showTheAnswer : questionWord.word}
+            ></ArticleBox>
+            <Grid
+              display={'flex'}
+              flexDirection={'row'}
+              justifyContent={'center'}
+              sx={{backgroundColor: 'primary.dark'}}
             >
-              <Typography component="h4" variant="h4">
-                {questionWord.answer[0].article}
-              </Typography>
-            </Button>
-            <Button
-              variant="text"
-              onClick={() => optionClicked(questionWord.answer[1].article)}
-            >
-              <Typography component="h4" variant="h4">
-                {questionWord.answer[1].article}
-              </Typography>
-            </Button>
-          </Grid>
-        </Paper>
-      )}
+              <Button
+                sx={{color: 'primary.light'}}
+                variant="text"
+                onClick={() => optionClicked(questionWord.answer[0].article)}
+              >
+                <Typography component="h4" variant="h4">
+                  {questionWord.answer[0].article}
+                </Typography>
+              </Button>
+              <Button
+                sx={{color: 'primary.light'}}
+                variant="text"
+                onClick={() => optionClicked(questionWord.answer[1].article)}
+              >
+                <Typography component="h4" variant="h4">
+                  {questionWord.answer[1].article}
+                </Typography>
+              </Button>
+            </Grid>
+          </Paper>
+        )}
+      </ThemeProvider>
     </>
   );
 };
