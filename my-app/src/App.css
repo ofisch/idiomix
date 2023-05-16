@@ -1,3 +1,7 @@
 .MuiButton-text {
   text-transform: lowercase !important;
 }
+
+Button {
+  text-transform: lowercase !important;
+}

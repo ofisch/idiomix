@@ -25,6 +25,11 @@ const themeOptions = {
       dark: '#525C85',
       contrastText: '#F7F9F9',
     },
+},
+Button: {
+  '&:hover': {
+    color: 'primary.light',
+  }
 }
 }
 

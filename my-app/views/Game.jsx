@@ -23,11 +23,13 @@ let optionsToDisplay = [];
 
 const options = {
   speed: 2000,
+  rounds: 15,
 };
 
 const Game = () => {
-  const [showFinalResults, setFinalResults] = useState(false);
-  const [score, setScore] = useState(0);
+  let [showFinalResults, setFinalResults] = useState(false);
+  let [score, setScore] = useState(0);
+  let [streak, setStreak] = useState(0);
   const [currentQuestion, setQurrentQuestion] = useState(0);
 
   // palauttaa satunnaisen arvon sanalistasta
@@ -62,9 +64,11 @@ const Game = () => {
     if (answer == correctAnswer) {
       setAnswerTrue((answerTrue = true));
       setScore(score + 1);
+      setStreak(streak + 1);
+      options.speed -= 80;
     } else {
       setAnswerTrue((answerTrue = false));
-      setScore(score - 1);
+      setStreak((streak = 0));
     }
   };
 
@@ -89,6 +93,15 @@ const Game = () => {
     await delay(options.speed);
     setAnswerTrue((answerTrue = false));
     optionsToDisplay = [];
+    if (score + 1 == options.rounds) {
+      setFinalResults((showFinalResults = true));
+    }
+  };
+
+  const restart = () => {
+    setFinalResults((showFinalResults = false));
+    setScore((score = 0));
+    setStreak((streak = 0));
   };
 
   const optionClicked = (userAnswer) => {
@@ -104,10 +117,24 @@ const Game = () => {
         <CssBaseline></CssBaseline>
 
         {showFinalResults ? (
-          <Paper elevation={5}>
+          <Paper
+            elevation={5}
+            sx={{
+              width: '50%',
+              m: 'auto',
+              mt: '35px',
+              backgroundColor: 'primary.dark',
+            }}
+          >
             <Typography variant="h2">Final results:</Typography>
-            <Typography variant="h3">moi miten menee</Typography>
-            <Button>Restart</Button>
+            <Typography variant="h3">{score}</Typography>
+            <Button
+              onClick={() => {
+                restart();
+              }}
+            >
+              Restart
+            </Button>
           </Paper>
         ) : answerTrue ? (
           <Paper
@@ -120,7 +147,7 @@ const Game = () => {
               textAlign={'center'}
               sx={{p: 2}}
             >
-              Current score: {score}
+              Current streak: {streak}
             </Typography>
             <ArticleBox word={showTheAnswer}></ArticleBox>
             <Grid
@@ -165,7 +192,7 @@ const Game = () => {
               textAlign={'center'}
               sx={{p: 2}}
             >
-              Current score: {score}
+              Current streak: {streak}
             </Typography>
             <ArticleBox
               word={answerTrue ? showTheAnswer : questionWord.word}
@@ -177,7 +204,10 @@ const Game = () => {
               sx={{backgroundColor: 'primary.dark', mt: 3}}
             >
               <Button
-                sx={{color: 'primary.light'}}
+                sx={{
+                  color: 'rgba(0, 0, 0, 0.87)',
+                  '&:hover': {backgroundColor: 'primary.main'},
+                }}
                 variant="text"
                 onClick={() => optionClicked(questionWord.answer[0].article)}
               >
@@ -186,7 +216,12 @@ const Game = () => {
                 </Typography>
               </Button>
               <Button
-                sx={{color: 'primary.light'}}
+                sx={{
+                  color: 'rgba(0, 0, 0, 0.87)',
+                  '&:hover': {
+                    backgroundColor: 'primary.main',
+                  },
+                }}
                 variant="text"
                 onClick={() => optionClicked(questionWord.answer[1].article)}
               >
