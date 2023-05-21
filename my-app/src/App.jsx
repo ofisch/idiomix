@@ -16,6 +16,7 @@ import {
   Button,
 } from '@mui/material';
 import {themeOptions} from './theme/themeOptions';
+import Settings from '../views/Settings';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route element={<Grid container />}></Route>
         <Route path="/" element={<Start />} />
         <Route path="/game" element={<Game />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );

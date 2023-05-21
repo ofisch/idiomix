@@ -78,7 +78,8 @@ const Start = () => {
                   <Button
                     onClick={() => {
                       selectLang('es');
-                      navigate('/game');
+                      // navigate('/game');
+                      navigate('/settings');
                     }}
                   >
                     <img

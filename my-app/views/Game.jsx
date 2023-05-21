@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Start from './Start';
 import '../src/App.css';
 
-import {selectedLang} from '../hooks/infoHooks';
+import {selectedSpeed, selectedLang, selectedRounds} from '../hooks/infoHooks';
 import esWords from '../src/assets/EsWords.json';
 import ArticleBox from '../src/assets/components/ArticleBox';
 import {
@@ -18,15 +18,32 @@ import {
 } from '@mui/material';
 import {themeOptions} from '../src/theme/themeOptions';
 import {green} from '@mui/material/colors';
+import {useNavigate} from 'react-router-dom';
 
 let optionsToDisplay = [];
+let hardWords = [];
 
 const options = {
-  speed: 2000,
-  rounds: 15,
+  speed: 1000,
+  rounds: 10,
 };
 
 const Game = () => {
+  if (selectedSpeed != undefined) {
+    options.speed = selectedSpeed;
+    console.log('speed', selectedSpeed);
+  }
+
+  if (selectedRounds != undefined) {
+    options.rounds = selectedRounds;
+    console.log('rounds', selectedRounds);
+  }
+
+  console.log('options.speed', options.speed);
+  console.log('options.rounds', options.rounds);
+
+  const navigate = useNavigate();
+
   let [showFinalResults, setFinalResults] = useState(false);
   let [score, setScore] = useState(0);
   let [streak, setStreak] = useState(0);
@@ -68,7 +85,10 @@ const Game = () => {
       options.speed -= 80;
     } else {
       setAnswerTrue((answerTrue = false));
+      setScore(score + 1);
+
       setStreak((streak = 0));
+      hardWords.push(questionWord.word);
     }
   };
 
@@ -102,6 +122,11 @@ const Game = () => {
     setFinalResults((showFinalResults = false));
     setScore((score = 0));
     setStreak((streak = 0));
+    hardWords = [];
+  };
+
+  const renderHardWords = () => {
+    return hardWords.map((word) => <li>{word}</li>);
   };
 
   const optionClicked = (userAnswer) => {
@@ -120,7 +145,7 @@ const Game = () => {
           <Paper
             elevation={5}
             sx={{
-              width: '50%',
+              width: '45%',
               m: 'auto',
               mt: '35px',
               backgroundColor: 'primary.dark',
@@ -128,9 +153,12 @@ const Game = () => {
           >
             <Typography variant="h2">Final results:</Typography>
             <Typography variant="h3">{score}</Typography>
+            <Typography variant="h2">Hard words:</Typography>
+            <Typography variant="h4">{renderHardWords()}</Typography>
             <Button
               onClick={() => {
                 restart();
+                navigate('/settings');
               }}
             >
               Restart
@@ -139,7 +167,7 @@ const Game = () => {
         ) : answerTrue ? (
           <Paper
             elevation={5}
-            sx={{width: '50%', m: 'auto', mt: '35px', backgroundColor: 'green'}}
+            sx={{width: '45%', m: 'auto', mt: '35px', backgroundColor: 'green'}}
           >
             <Typography
               component="h1"
@@ -180,7 +208,7 @@ const Game = () => {
           <Paper
             elevation={5}
             sx={{
-              width: '50%',
+              width: '45%',
               m: 'auto',
               mt: '35px',
               backgroundColor: 'primary.main',
