@@ -31,6 +31,7 @@ let hardWords = [];
 const options = {
   speed: 1000,
   rounds: 10,
+  type: 'all',
 };
 
 const Game = () => {
@@ -185,7 +186,11 @@ const Game = () => {
               </li>
             ))}
           </Grid>
-        ) : null}
+        ) : (
+          <Typography sx={{mt: 2}} component="p" variant="h4">
+            ¡Buen trabajo!
+          </Typography>
+        )}
       </>
     );
   };
@@ -213,7 +218,7 @@ const Game = () => {
             }}
           >
             <Grid sx={{p: 2}}>
-              <Typography variant="h2">
+              <Typography variant="h2" component="h2">
                 {score} / {options.rounds} correct
               </Typography>
               <Typography variant="h4">{renderHardWords()}</Typography>
@@ -221,7 +226,7 @@ const Game = () => {
             <Grid
               display={'flex'}
               flexDirection={'row'}
-              sx={{backgroundColor: 'primary.dark', mt: 3}}
+              sx={{backgroundColor: 'primary.dark', mt: 2}}
             >
               <Button
                 sx={{

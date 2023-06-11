@@ -7,27 +7,26 @@ const themeOptions = {
 
     h1: {
       fontSize: '2.6em',
-      fontFamily: 'karla'
+      fontFamily: 'merriweather'
     },
     h2: {
       fontSize: '1.8em',
-      fontFamily: 'karla'
+      fontFamily: 'merriweather'
     },
     h3: {
       fontSize: '1.6em',
-      fontFamily: 'karla'
+      fontFamily: 'merriweather'
     },
     h4: {
-      fontSize: '1.5em',
-      fontFamily: 'karla'
+      fontFamily: 'karla',
     },
     body1: {
       fontSize: '1.3em',
-      fontFamily: 'merriweather',
+      fontFamily: 'karla',
     },
     p: {
-      fontFamily: 'merriweather',
-    }
+      fontFamily: 'karla',
+    },
   },
   palette: {
     primary: {

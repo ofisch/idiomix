@@ -59,12 +59,14 @@ const Start = () => {
                 </Typography>
               </Grid>
               <Grid item sx={{p: 1}}>
-                <Typography component="h2" variant="h4">
+                <Typography component="h2" variant="h2">
                   A language learning game
                 </Typography>
               </Grid>
               <Grid item sx={{p: 1, mt: 5}}>
-                <Typography component="p">Select a language</Typography>
+                <Typography component="p" variant="p">
+                  Select a language
+                </Typography>
               </Grid>
               <Grid
                 sx={{

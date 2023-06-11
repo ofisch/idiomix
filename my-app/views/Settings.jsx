@@ -25,7 +25,7 @@ const Settings = () => {
 
   let [roundsInput, setRoundsInput] = useState(10);
   let [speedInput, setSpeedInput] = useState(10);
-  let [typeInput, setTypeInput] = useState('');
+  let [typeInput, setTypeInput] = useState('all');
 
   const handleRoundsInput = (e) => {
     setRoundsInput(e.target.value);
