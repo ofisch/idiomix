@@ -1,17 +1,33 @@
+import "@fontsource/karla"
+import "@fontsource/merriweather"
+
+
 const themeOptions = {
   typography: {
+
     h1: {
       fontSize: '2.6em',
+      fontFamily: 'karla'
     },
     h2: {
       fontSize: '1.8em',
+      fontFamily: 'karla'
     },
     h3: {
       fontSize: '1.6em',
+      fontFamily: 'karla'
+    },
+    h4: {
+      fontSize: '1.5em',
+      fontFamily: 'karla'
     },
     body1: {
       fontSize: '1.3em',
+      fontFamily: 'merriweather',
     },
+    p: {
+      fontFamily: 'merriweather',
+    }
   },
   palette: {
     primary: {

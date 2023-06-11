@@ -68,13 +68,6 @@ const Game = () => {
   let [questionWord, setQuestionWord] = useState('');
   let [answer, setAnswer] = useState('');
 
-  // haetaan satunnainen sana listasta
-  /*if (selectedLang == 'es') {
-    questionWord = esWords[getRandIndex()];
-  } else if (selectedLang == 'se') {
-    console.log('ruotti kesken');
-  }*/
-
   const getRandWord = (category) => {
     if (selectedLang == 'es') {
       let wordToSelect = '';
