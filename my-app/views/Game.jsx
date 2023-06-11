@@ -171,18 +171,30 @@ const Game = () => {
   };
 
   const renderHardWords = () => {
-    return hardWords.map((word) => (
-      <li
-        sx={{
-          color: 'primary.main',
-          '&:hover': {
-            color: 'primary.dark',
-          },
-        }}
-      >
-        <a href={'https://www.spanishdict.com/translate/' + word}>{word}</a>
-      </li>
-    ));
+    return (
+      <>
+        {hardWords.length > 0 ? (
+          <Grid>
+            <Typography variant="h4">Hard words:</Typography>
+
+            {hardWords.map((word) => (
+              <li
+                sx={{
+                  color: 'primary.main',
+                  '&:hover': {
+                    color: 'primary.dark',
+                  },
+                }}
+              >
+                <a href={'https://www.spanishdict.com/translate/' + word}>
+                  {word}
+                </a>
+              </li>
+            ))}
+          </Grid>
+        ) : null}
+      </>
+    );
   };
 
   const optionClicked = (userAnswer) => {
