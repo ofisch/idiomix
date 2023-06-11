@@ -45,10 +45,14 @@ const Game = () => {
     console.log('rounds', selectedRounds);
   }
 
+  if (selectedType != undefined) {
+    options.type = selectedType;
+    console.log('type', selectedType);
+  }
+
   console.log('options.speed', options.speed);
   console.log('options.rounds', options.rounds);
-
-  console.log('type:', selectedType);
+  console.log('options.type', options.type);
 
   const navigate = useNavigate();
 
@@ -103,7 +107,7 @@ const Game = () => {
   };
 
   // haetaan satunnainen sana listasta
-  getRandWord(selectedType);
+  getRandWord(options.type);
 
   // tarkistetaan, onko vastaus oikein
   const checkCorrectAnswer = () => {
