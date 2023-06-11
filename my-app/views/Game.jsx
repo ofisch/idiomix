@@ -2,7 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 import Start from './Start';
 import '../src/App.css';
 
-import {selectedSpeed, selectedLang, selectedRounds} from '../hooks/infoHooks';
+import {
+  selectedSpeed,
+  selectedLang,
+  selectedRounds,
+  selectedType,
+} from '../hooks/infoHooks';
 import esWords from '../src/assets/EsWords.json';
 import ArticleBox from '../src/assets/components/ArticleBox';
 import {
@@ -18,7 +23,7 @@ import {
 } from '@mui/material';
 import {themeOptions} from '../src/theme/themeOptions';
 import {green} from '@mui/material/colors';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 let optionsToDisplay = [];
 let hardWords = [];
@@ -42,6 +47,8 @@ const Game = () => {
   console.log('options.speed', options.speed);
   console.log('options.rounds', options.rounds);
 
+  console.log('type:', selectedType);
+
   const navigate = useNavigate();
 
   let [showFinalResults, setFinalResults] = useState(false);
@@ -62,11 +69,47 @@ const Game = () => {
   let [answer, setAnswer] = useState('');
 
   // haetaan satunnainen sana listasta
-  if (selectedLang == 'es') {
+  /*if (selectedLang == 'es') {
     questionWord = esWords[getRandIndex()];
   } else if (selectedLang == 'se') {
     console.log('ruotti kesken');
-  }
+  }*/
+
+  const getRandWord = (category) => {
+    if (selectedLang == 'es') {
+      let wordToSelect = '';
+      let prevWord = '';
+      if (category == 'all') {
+        // questionWord = esWords[getRandIndex()];
+        wordToSelect = esWords[getRandIndex()];
+        console.log('all:', wordToSelect);
+      } else if (category == 'articles') {
+        wordToSelect = esWords[getRandIndex()];
+        while (
+          wordToSelect.type != 'article' &&
+          prevWord.word != wordToSelect.word
+        ) {
+          wordToSelect = esWords[getRandIndex()];
+        }
+        console.log('articles:', wordToSelect);
+      } else if (category == 'conjugation') {
+        wordToSelect = esWords[getRandIndex()];
+        while (
+          wordToSelect.type != 'conjugation' &&
+          prevWord.word != wordToSelect.word
+        ) {
+          wordToSelect = esWords[getRandIndex()];
+        }
+        console.log('conjugation:', wordToSelect);
+      }
+
+      questionWord = wordToSelect;
+      prevWord = wordToSelect;
+    }
+  };
+
+  // haetaan satunnainen sana listasta
+  getRandWord(selectedType);
 
   // tarkistetaan, onko vastaus oikein
   const checkCorrectAnswer = () => {
@@ -82,13 +125,15 @@ const Game = () => {
       setAnswerTrue((answerTrue = true));
       setScore(score + 1);
       setStreak(streak + 1);
-      options.speed -= 80;
+      //  options.speed -= 80;
     } else {
       setAnswerTrue((answerTrue = false));
       setScore(score + 1);
 
       setStreak((streak = 0));
-      hardWords.push(questionWord.word);
+      if (!hardWords.includes(questionWord.word)) {
+        hardWords.push(questionWord.word);
+      }
     }
   };
 
@@ -126,7 +171,18 @@ const Game = () => {
   };
 
   const renderHardWords = () => {
-    return hardWords.map((word) => <li>{word}</li>);
+    return hardWords.map((word) => (
+      <li
+        sx={{
+          color: 'primary.main',
+          '&:hover': {
+            color: 'primary.dark',
+          },
+        }}
+      >
+        <a href={'https://www.spanishdict.com/translate/' + word}>{word}</a>
+      </li>
+    ));
   };
 
   const optionClicked = (userAnswer) => {
@@ -148,21 +204,36 @@ const Game = () => {
               width: '45%',
               m: 'auto',
               mt: '35px',
-              backgroundColor: 'primary.dark',
+              backgroundColor: 'primary.main',
             }}
           >
-            <Typography variant="h2">Final results:</Typography>
-            <Typography variant="h3">{score}</Typography>
-            <Typography variant="h2">Hard words:</Typography>
-            <Typography variant="h4">{renderHardWords()}</Typography>
-            <Button
-              onClick={() => {
-                restart();
-                navigate('/settings');
-              }}
+            <Grid sx={{p: 2}}>
+              <Typography variant="h2">
+                {score} / {options.rounds} correct
+              </Typography>
+              <Typography variant="h4">{renderHardWords()}</Typography>
+            </Grid>
+            <Grid
+              display={'flex'}
+              flexDirection={'row'}
+              sx={{backgroundColor: 'primary.dark', mt: 3}}
             >
-              Restart
-            </Button>
+              <Button
+                sx={{
+                  color: 'rgba(0, 0, 0, 0.87)',
+                  '&:hover': {backgroundColor: 'primary.main'},
+                }}
+                variant="text"
+                onClick={() => {
+                  restart();
+                  navigate('/settings');
+                }}
+              >
+                <Typography variant="h4" component="h4" sx={{}}>
+                  restart
+                </Typography>
+              </Button>
+            </Grid>
           </Paper>
         ) : answerTrue ? (
           <Paper
@@ -175,7 +246,7 @@ const Game = () => {
               textAlign={'center'}
               sx={{p: 2}}
             >
-              Current streak: {streak}
+              Streak: {streak}
             </Typography>
             <ArticleBox word={showTheAnswer}></ArticleBox>
             <Grid
@@ -220,7 +291,7 @@ const Game = () => {
               textAlign={'center'}
               sx={{p: 2}}
             >
-              Current streak: {streak}
+              Streak: {streak}
             </Typography>
             <ArticleBox
               word={answerTrue ? showTheAnswer : questionWord.word}

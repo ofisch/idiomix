@@ -17,14 +17,15 @@ import {
 import React, {useState} from 'react';
 import {themeOptions} from '../src/theme/themeOptions';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import {useNavigate} from 'react-router-dom';
-import {selectRounds, selectSpeed} from '../hooks/infoHooks';
+import {Form, useNavigate} from 'react-router-dom';
+import {selectRounds, selectSpeed, selectType} from '../hooks/infoHooks';
 
 const Settings = () => {
   const navigate = useNavigate();
 
   let [roundsInput, setRoundsInput] = useState(10);
   let [speedInput, setSpeedInput] = useState(10);
+  let [typeInput, setTypeInput] = useState('');
 
   const handleRoundsInput = (e) => {
     setRoundsInput(e.target.value);
@@ -34,6 +35,11 @@ const Settings = () => {
   const handleSpeedInput = (e) => {
     setSpeedInput(e.target.value);
     selectSpeed(e.target.value);
+  };
+
+  const handleTypeInput = (e) => {
+    setTypeInput(e.target.value);
+    selectType(e.target.value);
   };
 
   return (
@@ -84,6 +90,18 @@ const Settings = () => {
                   <MenuItem value={10}>1000</MenuItem>
                   <MenuItem value={20}>2000</MenuItem>
                   <MenuItem value={30}>3000</MenuItem>
+                </Select>
+              </FormControl>
+              <FormControl fullWidth>
+                <InputLabel>word type</InputLabel>
+                <Select
+                  value={typeInput}
+                  label="word type"
+                  onChange={handleTypeInput}
+                >
+                  <MenuItem value={'all'}>all</MenuItem>
+                  <MenuItem value={'articles'}>articles</MenuItem>
+                  <MenuItem value={'conjugation'}>conjugation</MenuItem>
                 </Select>
               </FormControl>
               <Button

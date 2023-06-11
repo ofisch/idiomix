@@ -159,5 +159,33 @@
     "type": "conjugation",
     "answer": [{"article": "podemos", "isCorrect": false},
     {"article": "pueden", "isCorrect": true}]
+  },
+  {
+    "id": 24,
+    "word": "nosotros",
+    "type": "conjugation",
+    "answer": [{"article": "vivir", "isCorrect": false},
+    {"article": "vivimos", "isCorrect": true}]
+  },
+  {
+    "id": 25,
+    "word": "ella",
+    "type": "conjugation",
+    "answer": [{"article": "pudo", "isCorrect": true},
+    {"article": "puedo", "isCorrect": false}]
+  },
+  {
+    "id": 26,
+    "word": "yo",
+    "type": "conjugation",
+    "answer": [{"article": "quieres", "isCorrect": false},
+    {"article": "quise", "isCorrect": true}]
+  },
+  {
+    "id": 27,
+    "word": "tú",
+    "type": "conjugation",
+    "answer": [{"article": "hiciste", "isCorrect": true},
+    {"article": "hacemos", "isCorrect": false}]
   }
 ]

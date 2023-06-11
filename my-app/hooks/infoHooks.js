@@ -1,5 +1,5 @@
 
-let selectedLang, selectedRounds, selectedSpeed;
+let selectedLang, selectedRounds, selectedSpeed, selectedType;
 
 const selectLang = (lang) => {
   selectedLang = lang;
@@ -15,4 +15,8 @@ const selectSpeed = (speed) => {
   selectedSpeed = speed;
 }
 
-export {selectLang, selectedLang, selectRounds, selectedRounds, selectSpeed, selectedSpeed};
+const selectType = (type) => {
+  selectedType = type;
+}
+
+export {selectLang, selectedLang, selectRounds, selectedRounds, selectSpeed, selectedSpeed, selectType, selectedType};
