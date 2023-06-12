@@ -100,7 +100,7 @@ const Settings = () => {
                   onChange={handleTypeInput}
                 >
                   <MenuItem value={'all'}>all</MenuItem>
-                  <MenuItem value={'articles'}>articles</MenuItem>
+                  <MenuItem value={'article'}>article</MenuItem>
                   <MenuItem value={'conjugation'}>conjugation</MenuItem>
                 </Select>
               </FormControl>

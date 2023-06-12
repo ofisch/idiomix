@@ -27,6 +27,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 let optionsToDisplay = [];
 let hardWords = [];
+let correctAnswers = [];
 
 const options = {
   speed: 1000,
@@ -50,13 +51,16 @@ const Game = () => {
     console.log('type', selectedType);
   }
 
+  /*
   console.log('options.speed', options.speed);
   console.log('options.rounds', options.rounds);
   console.log('options.type', options.type);
+*/
 
   const navigate = useNavigate();
 
   let [showFinalResults, setFinalResults] = useState(false);
+  let [round, setRound] = useState(0);
   let [score, setScore] = useState(0);
   let [streak, setStreak] = useState(0);
   const [currentQuestion, setQurrentQuestion] = useState(0);
@@ -81,7 +85,7 @@ const Game = () => {
         // questionWord = esWords[getRandIndex()];
         wordToSelect = esWords[getRandIndex()];
         console.log('all:', wordToSelect);
-      } else if (category == 'articles') {
+      } else if (category == 'article') {
         wordToSelect = esWords[getRandIndex()];
         while (
           wordToSelect.type != 'article' &&
@@ -89,7 +93,7 @@ const Game = () => {
         ) {
           wordToSelect = esWords[getRandIndex()];
         }
-        console.log('articles:', wordToSelect);
+        console.log('article:', wordToSelect);
       } else if (category == 'conjugation') {
         wordToSelect = esWords[getRandIndex()];
         while (
@@ -102,6 +106,22 @@ const Game = () => {
       }
 
       questionWord = wordToSelect;
+
+      // jos luku <= 5, vaihdetaan vastausvaihtoehtojen paikkaa
+      if (Math.floor(Math.random() * (10 - 1 + 1)) + 1 <= 5) {
+        let originalArticle = questionWord.answer[0].article;
+        let originalIsCorrect = questionWord.answer[0].isCorrect;
+
+        questionWord.answer[0].article = questionWord.answer[1].article;
+        questionWord.answer[1].article = originalArticle;
+
+        questionWord.answer[0].isCorrect = questionWord.answer[1].isCorrect;
+        questionWord.answer[1].isCorrect = originalIsCorrect;
+
+        console.log('[0]', questionWord.answer[0].article);
+        console.log('[1]', questionWord.answer[1].article);
+      }
+
       prevWord = wordToSelect;
     }
   };
@@ -121,16 +141,24 @@ const Game = () => {
 
     if (answer == correctAnswer) {
       setAnswerTrue((answerTrue = true));
+      setRound(round + 1);
       setScore(score + 1);
       setStreak(streak + 1);
       //  options.speed -= 80;
+
+      correctAnswers.push(answer);
     } else {
       setAnswerTrue((answerTrue = false));
-      setScore(score + 1);
+      setRound(round + 1);
 
       setStreak((streak = 0));
+      /*
       if (!hardWords.includes(questionWord.word)) {
         hardWords.push(questionWord.word);
+      }
+      */
+      if (!hardWords.includes(answer)) {
+        hardWords.push(answer);
       }
     }
   };
@@ -156,14 +184,14 @@ const Game = () => {
     await delay(options.speed);
     setAnswerTrue((answerTrue = false));
     optionsToDisplay = [];
-    if (score + 1 == options.rounds) {
+    if (round + 1 == options.rounds) {
       setFinalResults((showFinalResults = true));
     }
   };
 
   const restart = () => {
     setFinalResults((showFinalResults = false));
-    setScore((score = 0));
+    setRound((round = 0));
     setStreak((streak = 0));
     hardWords = [];
   };
@@ -191,9 +219,26 @@ const Game = () => {
             ))}
           </Grid>
         ) : (
-          <Typography sx={{mt: 2}} component="p" variant="h4">
-            ¡Buen trabajo!
-          </Typography>
+          <Grid>
+            <Typography sx={{mt: 2}} component="p" variant="h4">
+              ¡Buen trabajo!
+            </Typography>
+
+            {correctAnswers.map((word) => (
+              <li
+                sx={{
+                  color: 'primary.main',
+                  '&:hover': {
+                    color: 'primary.dark',
+                  },
+                }}
+              >
+                <a href={'https://www.spanishdict.com/translate/' + word}>
+                  {word}
+                </a>
+              </li>
+            ))}
+          </Grid>
         )}
       </>
     );
@@ -222,10 +267,12 @@ const Game = () => {
             }}
           >
             <Grid sx={{p: 2}}>
-              <Typography variant="h2" component="h2">
+              <Typography variant="h2" component="h1">
                 {score} / {options.rounds} correct
               </Typography>
-              <Typography variant="h4">{renderHardWords()}</Typography>
+              <Typography variant="h4" component="h2" sx={{fontSize: '1em'}}>
+                {renderHardWords()}
+              </Typography>
             </Grid>
             <Grid
               display={'flex'}
