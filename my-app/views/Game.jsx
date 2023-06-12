@@ -157,8 +157,15 @@ const Game = () => {
         hardWords.push(questionWord.word);
       }
       */
-      if (!hardWords.includes(answer)) {
-        hardWords.push(answer);
+
+      if (questionWord.type == 'article') {
+        if (!hardWords.includes(questionWord.word)) {
+          hardWords.push(questionWord.word);
+        }
+      } else if (questionWord.type == 'conjugation') {
+        if (!hardWords.includes(answer)) {
+          hardWords.push(answer);
+        }
       }
     }
   };
@@ -260,9 +267,13 @@ const Game = () => {
           <Paper
             elevation={5}
             sx={{
-              width: '45%',
+              /*width: '45%',*/
+              minWidth: '20vw',
+              maxWidth: '30vw',
               m: 'auto',
-              mt: '35px',
+              /*mt: '35px',*/
+              mt: 15,
+              mb: 15,
               backgroundColor: 'primary.main',
             }}
           >
@@ -299,7 +310,15 @@ const Game = () => {
         ) : answerTrue ? (
           <Paper
             elevation={5}
-            sx={{width: '45%', m: 'auto', mt: '35px', backgroundColor: 'green'}}
+            sx={{
+              /*width: '45%',*/ minWidth: '20vw',
+              maxWidth: '30vw',
+              m: 'auto',
+              /*mt: '35px',*/
+              mt: 15,
+              mb: 15,
+              backgroundColor: 'green',
+            }}
           >
             <Typography
               component="h1"
@@ -338,11 +357,15 @@ const Game = () => {
           </Paper>
         ) : (
           <Paper
-            elevation={5}
+            elevation={7}
             sx={{
-              width: '45%',
+              /*width: '45%',*/
+              minWidth: '20vw',
+              maxWidth: '30vw',
               m: 'auto',
-              mt: '35px',
+              /*mt: '35px',*/
+              mt: 15,
+              mb: 15,
               backgroundColor: 'primary.main',
             }}
           >

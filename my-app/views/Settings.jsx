@@ -24,7 +24,7 @@ const Settings = () => {
   const navigate = useNavigate();
 
   let [roundsInput, setRoundsInput] = useState(10);
-  let [speedInput, setSpeedInput] = useState(10);
+  let [speedInput, setSpeedInput] = useState(1000);
   let [typeInput, setTypeInput] = useState('all');
 
   const handleRoundsInput = (e) => {
@@ -49,9 +49,9 @@ const Settings = () => {
         <Paper
           elevation={7}
           sx={{
-            height: '50vh',
+            /*height: '50vh',*/
             minWidth: '20vw',
-            maxWidth: '50vw',
+            maxWidth: '30vw',
             backgroundColor: 'primary.dark',
             m: 'auto',
             mt: 15,
@@ -87,9 +87,9 @@ const Settings = () => {
                   label="speed"
                   onChange={handleSpeedInput}
                 >
-                  <MenuItem value={10}>1000</MenuItem>
-                  <MenuItem value={20}>2000</MenuItem>
-                  <MenuItem value={30}>3000</MenuItem>
+                  <MenuItem value={1000}>normal</MenuItem>
+                  <MenuItem value={500}>fast</MenuItem>
+                  <MenuItem value={300}>SUPER</MenuItem>
                 </Select>
               </FormControl>
               <FormControl fullWidth>
@@ -111,7 +111,9 @@ const Settings = () => {
                   navigate('/game');
                 }}
               >
-                Start
+                <Typography component="h4" variant="h4">
+                  start
+                </Typography>
               </Button>
             </Grid>
           </Paper>

@@ -33,9 +33,9 @@ const Start = () => {
         <Paper
           elevation={7}
           sx={{
-            height: '50vh',
+            /*height: '50vh',*/
             minWidth: '20vw',
-            maxWidth: '50vw',
+            maxWidth: '30vw',
             backgroundColor: 'primary.dark',
             m: 'auto',
             mt: 15,
@@ -49,6 +49,7 @@ const Start = () => {
               alignItems={'center'}
               sx={{
                 backgroundColor: 'primary.main',
+                height: '30%',
                 p: 2,
                 gap: 2,
               }}
