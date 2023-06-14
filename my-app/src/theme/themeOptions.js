@@ -24,6 +24,7 @@ const themeOptions = {
     body1: {
       fontSize: '1.3em',
       fontFamily: 'merriweather',
+
     },
     p: {
       fontSize: '1em',
@@ -31,6 +32,9 @@ const themeOptions = {
     },
   },
   palette: {
+    background: {
+      default: '#F7F9F9',
+    },
     primary: {
       light: '#F7F9F9',
       main: '#DFF3E4',
