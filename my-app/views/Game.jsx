@@ -24,6 +24,8 @@ import {
 import {themeOptions} from '../src/theme/themeOptions';
 import {green} from '@mui/material/colors';
 import {Link, useNavigate} from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import esFlag from '../src/assets/Flag_of_Spain.svg';
 
 let optionsToDisplay = [];
 let hardWords = [];
@@ -264,156 +266,303 @@ const Game = () => {
         <CssBaseline></CssBaseline>
 
         {showFinalResults ? (
-          <Paper
-            elevation={5}
-            sx={{
-              /*width: '45%',*/
-              minWidth: '20vw',
-              maxWidth: '30vw',
-              m: 'auto',
-              /*mt: '35px',*/
-              mt: 15,
-              mb: 15,
-              backgroundColor: 'primary.main',
-            }}
-          >
-            <Grid sx={{p: 2}}>
-              <Typography variant="h2" component="h1">
-                {score} / {options.rounds} correct
-              </Typography>
-              <Typography variant="h4" component="h2" sx={{fontSize: '1em'}}>
-                {renderHardWords()}
-              </Typography>
-            </Grid>
-            <Grid
-              display={'flex'}
-              flexDirection={'row'}
-              sx={{backgroundColor: 'primary.dark', mt: 2}}
+          <Grid sx={{mt: 5}}>
+            <Paper
+              elevation={5}
+              sx={{
+                /*width: '45%',*/
+                minWidth: '20vw',
+                maxWidth: '50vw',
+                m: 'auto',
+                /*mt: '35px',*/
+                mt: 5,
+                mb: 15,
+                backgroundColor: 'primary.main',
+                '@media (max-width:970px)': {maxWidth: '90vw'},
+              }}
             >
-              <Button
-                sx={{
-                  color: 'rgba(0, 0, 0, 0.87)',
-                  '&:hover': {backgroundColor: 'primary.main'},
-                }}
-                variant="text"
-                onClick={() => {
-                  restart();
-                  navigate('/settings');
-                }}
+              <Grid
+                container
+                flexDirection={'row'}
+                alignItems={'center'}
+                alignContent={'stretch'}
+                justifyContent={'space-between'}
+                sx={{px: 2, backgroundColor: 'primary.dark'}}
               >
-                <Typography variant="h4" component="h4" sx={{}}>
-                  restart
+                <ArrowBackIcon
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/settings');
+                  }}
+                ></ArrowBackIcon>
+                <Typography
+                  component={'h1'}
+                  variant="h1"
+                  textAlign={'center'}
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/');
+                  }}
+                >
+                  Idiomix
                 </Typography>
-              </Button>
-            </Grid>
-          </Paper>
+                <img
+                  style={{
+                    maxWidth: '2%',
+                    maxHeight: '2%',
+                  }}
+                  src={esFlag}
+                  alt="flag of Spain"
+                />
+              </Grid>
+              <Grid sx={{p: 2}}>
+                <Typography variant="h2" component="h1">
+                  {score} / {options.rounds} correct
+                </Typography>
+                <Typography variant="h4" component="h2" sx={{fontSize: '1em'}}>
+                  {renderHardWords()}
+                </Typography>
+              </Grid>
+              <Grid
+                display={'flex'}
+                flexDirection={'row'}
+                sx={{backgroundColor: 'primary.dark', mt: 2}}
+              >
+                <Button
+                  sx={{
+                    color: 'rgba(0, 0, 0, 0.87)',
+                    '&:hover': {backgroundColor: 'primary.main'},
+                  }}
+                  variant="text"
+                  onClick={() => {
+                    restart();
+                    navigate('/settings');
+                  }}
+                >
+                  <Typography variant="h4" component="h4" sx={{}}>
+                    restart
+                  </Typography>
+                </Button>
+              </Grid>
+            </Paper>
+          </Grid>
         ) : answerTrue ? (
-          <Paper
-            elevation={5}
-            sx={{
-              /*width: '45%',*/ minWidth: '20vw',
-              maxWidth: '30vw',
-              m: 'auto',
-              /*mt: '35px',*/
-              mt: 15,
-              mb: 15,
-              backgroundColor: 'green',
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h2"
-              textAlign={'center'}
-              sx={{p: 2}}
+          <Grid sx={{mt: 5}}>
+            <Paper
+              elevation={5}
+              sx={{
+                /*width: '45%',*/ minWidth: '20vw',
+                maxWidth: '50vw',
+                m: 'auto',
+                /*mt: '35px',*/
+                mt: 5,
+                mb: 15,
+                backgroundColor: 'green',
+                '@media (max-width:970px)': {maxWidth: '90vw'},
+              }}
             >
-              Streak: {streak}
-            </Typography>
-            <ArticleBox word={showTheAnswer}></ArticleBox>
-            <Grid
-              display={'flex'}
-              flexDirection={'row'}
-              justifyContent={'center'}
-              sx={{mt: 3}}
-            >
-              <Button
-                disabled
-                variant="text"
-                onClick={() => optionClicked(questionWord.answer[0].article)}
+              <Grid
+                container
+                flexDirection={'row'}
+                alignItems={'center'}
+                alignContent={'stretch'}
+                justifyContent={'space-between'}
+                sx={{px: 2, backgroundColor: 'primary.dark'}}
               >
-                <Typography component="h4" variant="h4">
-                  {optionsToDisplay[0].article}
+                <ArrowBackIcon
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/settings');
+                  }}
+                ></ArrowBackIcon>
+                <Typography
+                  component={'h1'}
+                  variant="h1"
+                  textAlign={'center'}
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/');
+                  }}
+                >
+                  Idiomix
                 </Typography>
-              </Button>
-              <Button
-                disabled
-                variant="text"
-                onClick={() => optionClicked(questionWord.answer[1].article)}
+                <img
+                  style={{
+                    maxWidth: '2%',
+                    maxHeight: '2%',
+                  }}
+                  src={esFlag}
+                  alt="flag of Spain"
+                />
+              </Grid>
+              <Typography
+                component="h1"
+                variant="h2"
+                textAlign={'center'}
+                sx={{p: 2}}
               >
-                <Typography component="h4" variant="h4">
-                  {optionsToDisplay[1].article}
-                </Typography>
-              </Button>
-            </Grid>
-          </Paper>
+                Streak: {streak}
+              </Typography>
+              <ArticleBox word={showTheAnswer}></ArticleBox>
+              <Grid
+                display={'flex'}
+                flexDirection={'row'}
+                justifyContent={'center'}
+                sx={{mt: 3}}
+              >
+                <Button
+                  disabled
+                  variant="text"
+                  onClick={() => optionClicked(questionWord.answer[0].article)}
+                >
+                  <Typography component="h4" variant="h4">
+                    {optionsToDisplay[0].article}
+                  </Typography>
+                </Button>
+                <Button
+                  disabled
+                  variant="text"
+                  onClick={() => optionClicked(questionWord.answer[1].article)}
+                >
+                  <Typography component="h4" variant="h4">
+                    {optionsToDisplay[1].article}
+                  </Typography>
+                </Button>
+              </Grid>
+            </Paper>
+          </Grid>
         ) : (
-          <Paper
-            elevation={7}
-            sx={{
-              /*width: '45%',*/
-              minWidth: '20vw',
-              maxWidth: '30vw',
-              m: 'auto',
-              /*mt: '35px',*/
-              mt: 15,
-              mb: 15,
-              backgroundColor: 'primary.main',
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h2"
-              textAlign={'center'}
-              sx={{p: 2}}
+          <Grid sx={{mt: 5}}>
+            <Paper
+              elevation={7}
+              sx={{
+                /*width: '45%',*/
+                minWidth: '20vw',
+                maxWidth: '50vw',
+                m: 'auto',
+                /*mt: '35px',*/
+                mt: 5,
+                mb: 15,
+                backgroundColor: 'primary.main',
+                '@media (max-width:970px)': {maxWidth: '90vw'},
+              }}
             >
-              Streak: {streak}
-            </Typography>
-            <ArticleBox
-              word={answerTrue ? showTheAnswer : questionWord.word}
-            ></ArticleBox>
-            <Grid
-              display={'flex'}
-              flexDirection={'row'}
-              justifyContent={'center'}
-              sx={{backgroundColor: 'primary.dark', mt: 3}}
-            >
-              <Button
-                sx={{
-                  color: 'rgba(0, 0, 0, 0.87)',
-                  '&:hover': {backgroundColor: 'primary.main'},
-                }}
-                variant="text"
-                onClick={() => optionClicked(questionWord.answer[0].article)}
+              <Grid
+                container
+                flexDirection={'row'}
+                alignItems={'center'}
+                alignContent={'stretch'}
+                justifyContent={'space-between'}
+                sx={{px: 2, backgroundColor: 'primary.dark'}}
               >
-                <Typography component="h4" variant="h4">
-                  {questionWord.answer[0].article}
+                <ArrowBackIcon
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/settings');
+                  }}
+                ></ArrowBackIcon>
+                <Typography
+                  component={'h1'}
+                  variant="h1"
+                  textAlign={'center'}
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      color: 'primary.light',
+                      scale: '1.3',
+                    },
+                  }}
+                  onClick={() => {
+                    navigate('/');
+                  }}
+                >
+                  Idiomix
                 </Typography>
-              </Button>
-              <Button
-                sx={{
-                  color: 'rgba(0, 0, 0, 0.87)',
-                  '&:hover': {
-                    backgroundColor: 'primary.main',
-                  },
-                }}
-                variant="text"
-                onClick={() => optionClicked(questionWord.answer[1].article)}
+                <img
+                  style={{
+                    maxWidth: '2%',
+                    maxHeight: '2%',
+                  }}
+                  src={esFlag}
+                  alt="flag of Spain"
+                />
+              </Grid>
+              <Typography
+                component="h2"
+                variant="h2"
+                textAlign={'center'}
+                sx={{p: 2}}
               >
-                <Typography component="h4" variant="h4">
-                  {questionWord.answer[1].article}
-                </Typography>
-              </Button>
-            </Grid>
-          </Paper>
+                Streak: {streak}
+              </Typography>
+              <ArticleBox
+                word={answerTrue ? showTheAnswer : questionWord.word}
+              ></ArticleBox>
+              <Grid
+                display={'flex'}
+                flexDirection={'row'}
+                justifyContent={'center'}
+                sx={{backgroundColor: 'primary.dark', mt: 3}}
+              >
+                <Button
+                  sx={{
+                    color: 'rgba(0, 0, 0, 0.87)',
+                    '&:hover': {backgroundColor: 'primary.main'},
+                  }}
+                  variant="text"
+                  onClick={() => optionClicked(questionWord.answer[0].article)}
+                >
+                  <Typography component="h4" variant="h4">
+                    {questionWord.answer[0].article}
+                  </Typography>
+                </Button>
+                <Button
+                  sx={{
+                    color: 'rgba(0, 0, 0, 0.87)',
+                    '&:hover': {
+                      backgroundColor: 'primary.main',
+                    },
+                  }}
+                  variant="text"
+                  onClick={() => optionClicked(questionWord.answer[1].article)}
+                >
+                  <Typography component="h4" variant="h4">
+                    {questionWord.answer[1].article}
+                  </Typography>
+                </Button>
+              </Grid>
+            </Paper>
+          </Grid>
         )}
       </ThemeProvider>
     </>

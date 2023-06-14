@@ -35,11 +35,12 @@ const Start = () => {
           sx={{
             /*height: '50vh',*/
             minWidth: '20vw',
-            maxWidth: '30vw',
+            maxWidth: '50vw',
             backgroundColor: 'primary.dark',
-            m: 'auto',
-            mt: 15,
+            mx: 'auto',
+            mt: 5,
             mb: 15,
+            '@media (max-width:970px)': {maxWidth: '90vw'},
           }}
         >
           <Paper elevation={0}>
@@ -52,6 +53,7 @@ const Start = () => {
                 height: '30%',
                 p: 2,
                 gap: 2,
+                '@media (max-width:480px)': {flexDirection: 'row'},
               }}
             >
               <Grid item sx={{p: 1}}>
@@ -64,7 +66,10 @@ const Start = () => {
                   A language learning game
                 </Typography>
               </Grid>
-              <Grid item sx={{p: 1, mt: 5}}>
+              <Grid
+                item
+                sx={{p: 1, mt: 5, '@media (max-width:490px)': {mt: 0}}}
+              >
                 <Typography component="p" variant="p">
                   Select a language
                 </Typography>

@@ -7,19 +7,32 @@ const themeOptions = {
 
     h1: {
       fontSize: '2.6em',
-      fontFamily: 'karla'
+      fontFamily: 'karla',
+      '@media (max-width:700px)': {
+        fontSize: '2.4em',
+      }
     },
     h2: {
       fontSize: '1.8em',
-      fontFamily: 'karla'
+      fontFamily: 'karla',
+      '@media (max-width:700px)': {
+        fontSize: '1.6em',
+      }
+
     },
     h3: {
-      fontSize: '1.6em',
-      fontFamily: 'karla'
+      fontSize: '1.7em',
+      fontFamily: 'karla',
+      '@media (max-width:700px)': {
+        fontSize: '1.5em',
+      }
     },
     h4: {
       fontSize: '1.6em',
       fontFamily: 'merriweather',
+      '@media (max-width:700px)': {
+
+      }
     },
     body1: {
       fontSize: '1.3em',

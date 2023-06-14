@@ -14,11 +14,13 @@ import {
   createTheme,
 } from '@mui/material';
 
+import esFlag from '../src/assets/Flag_of_Spain.svg';
 import React, {useState} from 'react';
 import {themeOptions} from '../src/theme/themeOptions';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import {Form, useNavigate} from 'react-router-dom';
 import {selectRounds, selectSpeed, selectType} from '../hooks/infoHooks';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -46,78 +48,127 @@ const Settings = () => {
     <>
       <ThemeProvider theme={createTheme(themeOptions)}>
         <CssBaseline></CssBaseline>
-        <Paper
-          elevation={7}
-          sx={{
-            /*height: '50vh',*/
-            minWidth: '20vw',
-            maxWidth: '30vw',
-            backgroundColor: 'primary.dark',
-            m: 'auto',
-            mt: 15,
-            mb: 15,
-          }}
-        >
-          <Paper elevation={0}>
+        <Grid sx={{mt: 5}}>
+          <Paper
+            elevation={7}
+            sx={{
+              /*height: '50vh',*/
+              minWidth: '20vw',
+              maxWidth: '50vw',
+              backgroundColor: 'primary.dark',
+              m: 'auto',
+              mt: 5,
+              mb: 15,
+              '@media (max-width:970px)': {maxWidth: '90vw'},
+            }}
+          >
             <Grid
               container
-              flexDirection={'column'}
+              flexDirection={'row'}
               alignItems={'center'}
-              sx={{backgroundColor: 'primary.main', p: 2, gap: 2}}
+              alignContent={'stretch'}
+              justifyContent={'space-between'}
+              sx={{px: 2}}
             >
-              <Typography component="h1" variant="h2">
-                Settings
-              </Typography>
-              <FormControl fullWidth>
-                <InputLabel>rounds</InputLabel>
-                <Select
-                  value={roundsInput}
-                  label="rounds"
-                  onChange={handleRoundsInput}
-                >
-                  <MenuItem value={10}>10</MenuItem>
-                  <MenuItem value={20}>20</MenuItem>
-                  <MenuItem value={30}>30</MenuItem>
-                </Select>
-              </FormControl>
-              <FormControl fullWidth>
-                <InputLabel>speed</InputLabel>
-                <Select
-                  value={speedInput}
-                  label="speed"
-                  onChange={handleSpeedInput}
-                >
-                  <MenuItem value={1000}>normal</MenuItem>
-                  <MenuItem value={500}>fast</MenuItem>
-                  <MenuItem value={300}>SUPER</MenuItem>
-                </Select>
-              </FormControl>
-              <FormControl fullWidth>
-                <InputLabel>word type</InputLabel>
-                <Select
-                  value={typeInput}
-                  label="word type"
-                  onChange={handleTypeInput}
-                >
-                  <MenuItem value={'all'}>all</MenuItem>
-                  <MenuItem value={'article'}>article</MenuItem>
-                  <MenuItem value={'conjugation'}>conjugation</MenuItem>
-                </Select>
-              </FormControl>
-              <Button
-                variant="contained"
-                sx={{color: 'black'}}
+              <ArrowBackIcon
+                sx={{
+                  color: 'black',
+                  '&:hover': {
+                    color: 'primary.light',
+                    scale: '1.3',
+                  },
+                }}
                 onClick={() => {
-                  navigate('/game');
+                  navigate('/');
+                }}
+              ></ArrowBackIcon>
+              <Typography
+                component={'h1'}
+                variant="h1"
+                textAlign={'center'}
+                sx={{
+                  color: 'black',
+                  '&:hover': {
+                    color: 'primary.light',
+                    scale: '1.3',
+                  },
+                }}
+                onClick={() => {
+                  navigate('/');
                 }}
               >
-                <Typography component="h4" variant="h4">
-                  start
-                </Typography>
-              </Button>
+                Idiomix
+              </Typography>
+              <img
+                style={{
+                  maxWidth: '2%',
+                  maxHeight: '2%',
+                }}
+                src={esFlag}
+                alt="flag of Spain"
+              />
             </Grid>
+            <Paper elevation={0}>
+              <Grid
+                container
+                flexDirection={'column'}
+                alignItems={'center'}
+                sx={{backgroundColor: 'primary.main', p: 2, gap: 2}}
+              >
+                <Typography component="h1" variant="h2">
+                  Settings
+                </Typography>
+                <FormControl fullWidth>
+                  <InputLabel>rounds</InputLabel>
+                  <Select
+                    value={roundsInput}
+                    label="rounds"
+                    onChange={handleRoundsInput}
+                  >
+                    <MenuItem value={10}>10</MenuItem>
+                    <MenuItem value={20}>20</MenuItem>
+                    <MenuItem value={30}>30</MenuItem>
+                  </Select>
+                </FormControl>
+                <FormControl fullWidth>
+                  <InputLabel>speed</InputLabel>
+                  <Select
+                    value={speedInput}
+                    label="speed"
+                    onChange={handleSpeedInput}
+                  >
+                    <MenuItem value={1000}>normal</MenuItem>
+                    <MenuItem value={500}>fast</MenuItem>
+                    <MenuItem value={300}>SUPER</MenuItem>
+                  </Select>
+                </FormControl>
+                <FormControl fullWidth>
+                  <InputLabel>word type</InputLabel>
+                  <Select
+                    value={typeInput}
+                    label="word type"
+                    onChange={handleTypeInput}
+                  >
+                    <MenuItem value={'all'}>all</MenuItem>
+                    <MenuItem value={'article'}>article</MenuItem>
+                    <MenuItem value={'conjugation'}>conjugation</MenuItem>
+                  </Select>
+                </FormControl>
+                <Button
+                  variant="contained"
+                  sx={{color: 'black'}}
+                  onClick={() => {
+                    navigate('/game');
+                  }}
+                >
+                  <Typography component="h4" variant="h4">
+                    start
+                  </Typography>
+                </Button>
+              </Grid>
+            </Paper>
           </Paper>
-        </Paper>
+        </Grid>
       </ThemeProvider>
     </>
   );
