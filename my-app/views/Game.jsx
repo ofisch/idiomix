@@ -320,8 +320,8 @@ const Game = () => {
                 </Typography>
                 <img
                   style={{
-                    maxWidth: '2%',
-                    maxHeight: '2%',
+                    maxWidth: '35px',
+                    maxHeight: '35px',
                   }}
                   src={esFlag}
                   alt="flag of Spain"
@@ -412,8 +412,8 @@ const Game = () => {
                 </Typography>
                 <img
                   style={{
-                    maxWidth: '2%',
-                    maxHeight: '2%',
+                    maxWidth: '35px',
+                    maxHeight: '35px',
                   }}
                   src={esFlag}
                   alt="flag of Spain"
@@ -510,8 +510,8 @@ const Game = () => {
                 </Typography>
                 <img
                   style={{
-                    maxWidth: '2%',
-                    maxHeight: '2%',
+                    maxWidth: '35px',
+                    maxHeight: '35px',
                   }}
                   src={esFlag}
                   alt="flag of Spain"
