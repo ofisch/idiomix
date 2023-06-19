@@ -9,6 +9,7 @@ import {
   selectedType,
 } from '../hooks/infoHooks';
 import esWords from '../src/assets/EsWords.json';
+import esFeedback from '../src/assets/EsFeedback.json';
 import ArticleBox from '../src/assets/components/ArticleBox';
 import {
   Box,
@@ -62,7 +63,7 @@ const Game = () => {
   const navigate = useNavigate();
 
   let [showFinalResults, setFinalResults] = useState(false);
-  let [round, setRound] = useState(0);
+  let [round, setRound] = useState(1);
   let [score, setScore] = useState(0);
   let [streak, setStreak] = useState(0);
   const [currentQuestion, setQurrentQuestion] = useState(0);
@@ -73,6 +74,16 @@ const Game = () => {
       return Math.floor(Math.random() * (esWords.length - 1) + 1);
     } else if (selectedLang == 'se') {
       return Math.floor(Math.random() * (se.length - 1) + 1);
+    }
+  };
+
+  const getRandFeedback = () => {
+    if (selectedLang == 'es') {
+      let index = Math.floor(Math.random() * (esFeedback.length - 1) + 1);
+      return esFeedback[index].feedback;
+    } else if (selectedLang == 'se') {
+      let index = Math.floor(Math.random() * (seFeedback.length - 1) + 1);
+      return seFeedback[index].feedback;
     }
   };
 
@@ -193,7 +204,7 @@ const Game = () => {
     await delay(options.speed);
     setAnswerTrue((answerTrue = false));
     optionsToDisplay = [];
-    if (round + 1 == options.rounds) {
+    if (round == options.rounds) {
       setFinalResults((showFinalResults = true));
     }
   };
@@ -203,6 +214,7 @@ const Game = () => {
     setRound((round = 0));
     setStreak((streak = 0));
     hardWords = [];
+    correctAnswers = [];
   };
 
   const renderHardWords = () => {
@@ -230,7 +242,7 @@ const Game = () => {
         ) : (
           <Grid>
             <Typography sx={{mt: 2}} component="p" variant="h4">
-              ¡Buen trabajo!
+              {getRandFeedback()}
             </Typography>
 
             {correctAnswers.map((word) => (
@@ -427,6 +439,14 @@ const Game = () => {
               >
                 Streak: {streak}
               </Typography>
+              <Typography
+                component="p"
+                variant="p"
+                textAlign={'center'}
+                sx={{mb: 2}}
+              >
+                {round} / {options.rounds}
+              </Typography>
               <ArticleBox word={showTheAnswer}></ArticleBox>
               <Grid
                 display={'flex'}
@@ -524,6 +544,14 @@ const Game = () => {
                 sx={{p: 2}}
               >
                 Streak: {streak}
+              </Typography>
+              <Typography
+                component="p"
+                variant="p"
+                textAlign={'center'}
+                sx={{mb: 2}}
+              >
+                {round} / {options.rounds}
               </Typography>
               <ArticleBox
                 word={answerTrue ? showTheAnswer : questionWord.word}

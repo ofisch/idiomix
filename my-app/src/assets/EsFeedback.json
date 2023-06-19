@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "feedback": "¡Buen trabajo!"
+  },
+  {
+    "id": 2,
+    "feedback": "¡Sigue con el buen trabajo!"
+  },
+  {
+    "id": 3,
+    "feedback": "¡Estás en el camino correcto!"
+  },
+  {
+    "id": 4,
+    "feedback": "¡Sigue con el buen trabajo!"
+  },
+  {
+    "id": 5,
+    "feedback": "¡Lo has hecho parecer fácil!"
+  },
+  {
+    "id": 6,
+    "feedback": "¡Estás aprendiendo rápido!"
+  },
+  {
+    "id": 7,
+    "feedback": "¡Buen trabajo! ¡Sigue así!"
+  },
+  {
+    "id": 8,
+    "feedback": "¡Buen esfuerzo!"
+  }
+]
