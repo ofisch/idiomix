@@ -101,8 +101,8 @@ const Game = () => {
       } else if (category == 'article') {
         wordToSelect = esWords[getRandIndex()];
         while (
-          wordToSelect.type != 'article' &&
-          prevWord.word != wordToSelect.word
+          wordToSelect.type != 'article' //&&
+          //prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
         }
@@ -136,6 +136,7 @@ const Game = () => {
       }
 
       prevWord = wordToSelect;
+      console.log('prevWord: ', prevWord);
     }
   };
 

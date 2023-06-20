@@ -417,5 +417,97 @@
       {"article": "fueron", "isCorrect": true},
       {"article": "voy", "isCorrect": false}
     ]
-  }
+  },
+  [
+    {
+      "id": 58,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [
+        {"article": "veo", "isCorrect": true},
+        {"article": "ves", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 59,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ves", "isCorrect": true},
+        {"article": "vais", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 60,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ve", "isCorrect": true},
+        {"article": "ven", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 61,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ve", "isCorrect": true},
+        {"article": "veis", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 62,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ve", "isCorrect": true},
+        {"article": "ven", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 63,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [
+        {"article": "vemos", "isCorrect": true},
+        {"article": "veo", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 64,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [
+        {"article": "veis", "isCorrect": true},
+        {"article": "ve", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 65,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ven", "isCorrect": true},
+        {"article": "veo", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 66,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ven", "isCorrect": true},
+        {"article": "ves", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 67,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [
+        {"article": "ven", "isCorrect": true},
+        {"article": "veis", "isCorrect": false}
+      ]
+    }
+  ]
 ]
