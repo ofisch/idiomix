@@ -112,6 +112,9 @@ const Start = () => {
                   </Button>
                 </Grid>
               </Grid>
+              <Typography component="p" variant="p" sx={{scale: '0.7'}}>
+                by <a href="https://github.com/ofisch">onni</a>
+              </Typography>
             </Grid>
           </Paper>
         </Paper>

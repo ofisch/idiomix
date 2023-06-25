@@ -98,6 +98,7 @@ const Game = () => {
         // questionWord = esWords[getRandIndex()];
         wordToSelect = esWords[getRandIndex()];
         console.log('all:', wordToSelect);
+        console.log('getRandIndex esWords: ', esWords[getRandIndex()]);
       } else if (category == 'article') {
         wordToSelect = esWords[getRandIndex()];
         while (
@@ -110,8 +111,8 @@ const Game = () => {
       } else if (category == 'conjugation') {
         wordToSelect = esWords[getRandIndex()];
         while (
-          wordToSelect.type != 'conjugation' &&
-          prevWord.word != wordToSelect.word
+          wordToSelect.type != 'conjugation' //&&
+          //prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
         }
@@ -135,7 +136,7 @@ const Game = () => {
         console.log('[1]', questionWord.answer[1].article);
       }
 
-      prevWord = wordToSelect;
+      prevWord = wordToSelect.word;
       console.log('prevWord: ', prevWord);
     }
   };

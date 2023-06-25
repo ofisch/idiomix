@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "word": "carro",
+    "word": "coche",
     "type": "article",
     "answer": [{"article": "un", "isCorrect": true},
     {"article": "una", "isCorrect": false}]
@@ -418,7 +418,6 @@
       {"article": "voy", "isCorrect": false}
     ]
   },
-  [
     {
       "id": 58,
       "word": "yo",
@@ -508,6 +507,146 @@
         {"article": "ven", "isCorrect": true},
         {"article": "veis", "isCorrect": false}
       ]
+    },
+    {
+      "id": 68,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "puedo", "isCorrect": true},
+      {"article": "poder", "isCorrect": false}]
+    },
+    {
+      "id": 69,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "puedes", "isCorrect": true},
+      {"article": "puedo", "isCorrect": false}]
+    },
+    {
+      "id": 70,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "puede", "isCorrect": true},
+      {"article": "puedes", "isCorrect": true}]
+    },
+    {
+      "id": 71,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "puede", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 72,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "puede", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 73,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "podemos", "isCorrect": true},
+      {"article": "pueden", "isCorrect": false}]
+    },
+    {
+      "id": 74,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "podéis", "isCorrect": true},
+      {"article": "puede", "isCorrect": false}]
+    },
+    {
+      "id": 75,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "pueden", "isCorrect": true},
+      {"article": "puede", "isCorrect": false}]
+    },
+    {
+      "id": 76,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": " pueden", "isCorrect": true},
+      {"article": "podemos", "isCorrect": false}]
+    },
+    {
+      "id": 77,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "pueden", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 78,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "pude", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 79,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "pudiste", "isCorrect": true},
+      {"article": "puedo", "isCorrect": false}]
+    },
+    {
+      "id": 80,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "pudo", "isCorrect": true},
+      {"article": "puedes", "isCorrect": true}]
+    },
+    {
+      "id": 81,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "pudo", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 82,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "pudo", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
+    },
+    {
+      "id": 83,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pudemos", "isCorrect": true},
+      {"article": "pueden", "isCorrect": false}]
+    },
+    {
+      "id": 84,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pudisteis", "isCorrect": true},
+      {"article": "puede", "isCorrect": false}]
+    },
+    {
+      "id": 85,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "pudieron", "isCorrect": true},
+      {"article": "puede", "isCorrect": false}]
+    },
+    {
+      "id": 86,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "pudieron", "isCorrect": true},
+      {"article": "podemos", "isCorrect": false}]
+    },
+    {
+      "id": 87,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "pudieron", "isCorrect": true},
+      {"article": "puedes", "isCorrect": false}]
     }
   ]
-]
+
