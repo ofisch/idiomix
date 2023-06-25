@@ -87,7 +87,7 @@ const Settings = () => {
                 variant="h1"
                 textAlign={'center'}
                 sx={{
-                  color: 'black',
+                  color: 'text.primary',
                   '&:hover': {
                     color: 'primary.light',
                     scale: '1.3',

@@ -4,7 +4,6 @@ import "@fontsource/merriweather"
 
 const themeOptions = {
   typography: {
-
     h1: {
       fontSize: '2.6em',
       fontFamily: 'karla',
@@ -59,12 +58,13 @@ const themeOptions = {
       dark: '#525C85',
       contrastText: '#F7F9F9',
     },
+
 },
-Button: {
-  '&:hover': {
-    color: 'primary.light',
+  button: {
+    '&:hover': {
+      color: 'primary.light',
+    }
   }
-}
 }
 
 export {themeOptions};
