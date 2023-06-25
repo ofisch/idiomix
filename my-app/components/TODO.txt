@@ -1,0 +1,16 @@
+TODO:
+
+lisää perusverbit + preteritit (vihko) -- 50%
+alottele lauseen täyttöö
+kierrosmäärän asettaminen itse
+
+
+lisätyt verbit:
+
+ir, ver, poder, dar, saber, poner
+
+lausetäyttöidiksii:
+
+Ellos escuchaban la radio cuando oyeron un ruido afuera.
+Yo estaba en mi cuarto cuando usted entró.
+Era un día muy tranquilo cuando eso pasó.

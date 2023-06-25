@@ -102,8 +102,8 @@ const Game = () => {
       } else if (category == 'article') {
         wordToSelect = esWords[getRandIndex()];
         while (
-          wordToSelect.type != 'article' //&&
-          //prevWord.word != wordToSelect.word
+          wordToSelect.type != 'article' &&
+          prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
         }
@@ -111,8 +111,8 @@ const Game = () => {
       } else if (category == 'conjugation') {
         wordToSelect = esWords[getRandIndex()];
         while (
-          wordToSelect.type != 'conjugation' //&&
-          //prevWord.word != wordToSelect.word
+          wordToSelect.type != 'conjugation' &&
+          prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
         }
@@ -136,7 +136,7 @@ const Game = () => {
         console.log('[1]', questionWord.answer[1].article);
       }
 
-      prevWord = wordToSelect.word;
+      prevWord = wordToSelect;
       console.log('prevWord: ', prevWord);
     }
   };
@@ -235,7 +235,13 @@ const Game = () => {
                   },
                 }}
               >
-                <a href={'https://www.spanishdict.com/translate/' + word}>
+                <a
+                  href={
+                    'https://www.spanishdict.com/translate/' +
+                    word +
+                    '?langFrom=es'
+                  }
+                >
                   {word}
                 </a>
               </li>
@@ -256,7 +262,13 @@ const Game = () => {
                   },
                 }}
               >
-                <a href={'https://www.spanishdict.com/translate/' + word}>
+                <a
+                  href={
+                    'https://www.spanishdict.com/translate/' +
+                    word +
+                    '?langFrom=es'
+                  }
+                >
                   {word}
                 </a>
               </li>
