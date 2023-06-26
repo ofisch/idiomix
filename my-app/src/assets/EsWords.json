@@ -2054,5 +2054,19 @@
       "type": "sentence",
       "answer": [{"article": "escuchaban", "isCorrect": true},
       {"article": "escucho", "isCorrect": false}]
+    },
+    {
+      "id": 269,
+      "word": "Yo estaba en mi cuarto cuando usted entró.",
+      "type": "sentence",
+      "answer": [{"article": "entró", "isCorrect": true},
+      {"article": "entré", "isCorrect": false}]
+    },
+    {
+      "id": 270,
+      "word": "Era un día muy tranquilo cuando eso pasó.",
+      "type": "sentence",
+      "answer": [{"article": "pasó", "isCorrect": true},
+      {"article": "pasas", "isCorrect": false}]
     }
   ]

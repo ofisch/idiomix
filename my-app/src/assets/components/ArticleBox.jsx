@@ -16,7 +16,7 @@ const ArticleBox = ({word, article}) => {
           alignItems={'center'}
           sx={{p: 2}}
         >
-          <Typography component="h4" variant="h4">
+          <Typography component="h4" variant="h4" sx={{textAlign: 'center'}}>
             {word}
           </Typography>
         </Grid>

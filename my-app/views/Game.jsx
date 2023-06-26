@@ -123,7 +123,7 @@ const Game = () => {
           prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
-          let splitString = wordToSelect.word.split(' ');
+          let splitString = wordToSelect.word.split(/[!\s_.]+/);
 
           for (let i = 0; i < splitString.length; i++) {
             for (let answer of wordToSelect.answer) {

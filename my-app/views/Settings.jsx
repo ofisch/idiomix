@@ -10,6 +10,7 @@ import {
   MenuItem,
   Paper,
   Select,
+  Slide,
   Typography,
   createTheme,
 } from '@mui/material';
@@ -48,6 +49,7 @@ const Settings = () => {
     <>
       <ThemeProvider theme={createTheme(themeOptions)}>
         <CssBaseline></CssBaseline>
+
         <Grid sx={{mt: 5}}>
           <Paper
             elevation={7}

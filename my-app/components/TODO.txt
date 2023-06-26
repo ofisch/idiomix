@@ -1,13 +1,14 @@
 TODO:
 
 lisää perusverbit + preteritit (vihko) -- TEHTY
-alottele lauseen täyttöö
+alottele lauseen täyttöö - TEHTY
+lauseentäyttö loppuun - TEHTY
 kierrosmäärän asettaminen itse
 
 
 lisätyt verbit:
 
-ir, ver, poder, dar, saber, poner, pedir, seguir, serviv, ser, estar, tener, hacer
+ir, ver, poder, dar, saber, poner, pedir, seguir, serviv, ser, estar, tener, hacer - KAIKKI
 
 lausetäyttöidiksii:
 
