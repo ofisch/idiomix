@@ -95,10 +95,9 @@ const Game = () => {
       let wordToSelect = '';
       let prevWord = '';
       if (category == 'all') {
-        // questionWord = esWords[getRandIndex()];
         wordToSelect = esWords[getRandIndex()];
-        console.log('all:', wordToSelect);
-        console.log('getRandIndex esWords: ', esWords[getRandIndex()]);
+        /*console.log('all:', wordToSelect);
+        console.log('getRandIndex esWords: ', esWords[getRandIndex()]);*/
       } else if (category == 'article') {
         wordToSelect = esWords[getRandIndex()];
         while (
@@ -117,6 +116,32 @@ const Game = () => {
           wordToSelect = esWords[getRandIndex()];
         }
         console.log('conjugation:', wordToSelect);
+      } else if (category == 'sentence') {
+        wordToSelect = esWords[getRandIndex()];
+        while (
+          wordToSelect.type != 'sentence' &&
+          prevWord.word != wordToSelect.word
+        ) {
+          wordToSelect = esWords[getRandIndex()];
+          let splitString = wordToSelect.word.split(' ');
+
+          for (let i = 0; i < splitString.length; i++) {
+            for (let answer of wordToSelect.answer) {
+              console.log('answer: ', answer.article);
+              if (answer.isCorrect == true) {
+                if (splitString[i] == answer.article) {
+                  console.log('word: ', splitString[i]);
+                  splitString[i] = '___';
+                  wordToSelect.word = splitString.join(' ');
+                  console.log('wordToSelect.word: ', wordToSelect.word);
+                }
+              }
+            }
+          }
+
+          console.log('splitString: ', splitString);
+        }
+        console.log('sentence:', wordToSelect);
       }
 
       questionWord = wordToSelect;
@@ -181,6 +206,10 @@ const Game = () => {
         if (!hardWords.includes(answer)) {
           hardWords.push(answer);
         }
+      } else if (questionWord.type == 'sentence') {
+        if (!hardWords.includes(answer)) {
+          hardWords.push(answer);
+        }
       }
     }
   };
@@ -199,6 +228,17 @@ const Game = () => {
       setShowTheAnswer((showTheAnswer = article + ' ' + questionWord.word));
     } else if (questionWord.type == 'conjugation') {
       setShowTheAnswer((showTheAnswer = questionWord.word + ' ' + article));
+    } else if (questionWord.type == 'sentence') {
+      let splitQuestion = questionWord.word.split(' ');
+
+      for (let i = 0; i < splitQuestion.length; i++) {
+        if (splitQuestion[i] == '___') {
+          splitQuestion[i] = article;
+        }
+      }
+
+      let completeSentence = splitQuestion.join(' ');
+      setShowTheAnswer((showTheAnswer = completeSentence));
     }
 
     optionsToDisplay.push(...questionWord.answer.slice(0, 2));

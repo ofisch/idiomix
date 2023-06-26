@@ -152,6 +152,7 @@ const Settings = () => {
                     <MenuItem value={'all'}>all</MenuItem>
                     <MenuItem value={'article'}>article</MenuItem>
                     <MenuItem value={'conjugation'}>conjugation</MenuItem>
+                    <MenuItem value={'sentence'}>sentence</MenuItem>
                   </Select>
                 </FormControl>
                 <Button

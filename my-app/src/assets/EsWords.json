@@ -2047,5 +2047,12 @@
       "type": "conjugation",
       "answer": [{"article": "hicieron", "isCorrect": true},
       {"article": "hacéis", "isCorrect": false}]
+    },
+    {
+      "id": 268,
+      "word": "Ellos escuchaban la radio cuando oyeron un ruido afuera.",
+      "type": "sentence",
+      "answer": [{"article": "escuchaban", "isCorrect": true},
+      {"article": "escucho", "isCorrect": false}]
     }
   ]

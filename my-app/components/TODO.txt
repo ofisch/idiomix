@@ -1,6 +1,6 @@
 TODO:
 
-lisää perusverbit + preteritit (vihko) -- 75%
+lisää perusverbit + preteritit (vihko) -- TEHTY
 alottele lauseen täyttöö
 kierrosmäärän asettaminen itse
 
