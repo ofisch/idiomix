@@ -1067,6 +1067,985 @@
       "type": "conjugation",
       "answer": [{"article": "pusieron", "isCorrect": true},
       {"article": "pongo", "isCorrect": false}]
+    },
+    {
+      "id": 138,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "pido", "isCorrect": true},
+      {"article": "pidió", "isCorrect": false}]
+    },
+    {
+      "id": 139,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "pides", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 140,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "pide", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 141,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "pide", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 142,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "pide", "isCorrect": true},
+      {"article": "piden", "isCorrect": false}]
+    },
+    {
+      "id": 143,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pedimos", "isCorrect": true},
+      {"article": "pusisteis", "isCorrect": false}]
+    },
+    {
+      "id": 144,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pedís", "isCorrect": true},
+      {"article": "pediríamos", "isCorrect": false}]
+    },
+    {
+      "id": 145,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "piden", "isCorrect": true},
+      {"article": "pido", "isCorrect": false}]
+    },
+    {
+      "id": 146,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "piden", "isCorrect": true},
+      {"article": "pones", "isCorrect": false}]
+    },
+    {
+      "id": 147,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "piden", "isCorrect": true},
+      {"article": "pongo", "isCorrect": false}]
+    },
+    {
+      "id": 148,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "pedí", "isCorrect": true},
+      {"article": "pidió", "isCorrect": false}]
+    },
+    {
+      "id": 149,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "pediste", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 150,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "pidió", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 151,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "pidió", "isCorrect": true},
+      {"article": "pedís", "isCorrect": false}]
+    },
+    {
+      "id": 152,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "pidió", "isCorrect": true},
+      {"article": "piden", "isCorrect": false}]
+    },
+    {
+      "id": 153,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pedimos", "isCorrect": true},
+      {"article": "pedimos", "isCorrect": true}]
+    },
+    {
+      "id": 154,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "pedisteis", "isCorrect": true},
+      {"article": "pidieron", "isCorrect": false}]
+    },
+    {
+      "id": 155,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "pidieron", "isCorrect": true},
+      {"article": "pidió", "isCorrect": false}]
+    },
+    {
+      "id": 156,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "pidieron", "isCorrect": true},
+      {"article": "pones", "isCorrect": false}]
+    },
+    {
+      "id": 157,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "pidieron", "isCorrect": true},
+      {"article": "pidió", "isCorrect": false}]
+    },
+    {
+      "id": 158,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "sigo", "isCorrect": true},
+      {"article": "sigue", "isCorrect": false}]
+    },
+    {
+      "id": 159,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "sigues", "isCorrect": true},
+      {"article": "sigue", "isCorrect": false}]
+    },
+    {
+      "id": 160,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "sigue", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 161,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "sigue", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 162,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "sigue", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 163,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "seguimos", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 164,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "seguís", "isCorrect": true},
+      {"article": "sigues", "isCorrect": false}]
+    },
+    {
+      "id": 165,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "siguen", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 166,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "siguen", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 167,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "siguen", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 168,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "seguí", "isCorrect": true},
+      {"article": "sigue", "isCorrect": false}]
+    },
+    {
+      "id": 169,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "seguiste", "isCorrect": true},
+      {"article": "sigue", "isCorrect": false}]
+    },
+    {
+      "id": 170,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "siguió", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 171,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "siguió", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 172,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "siguió", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 173,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "seguimos", "isCorrect": true},
+      {"article": "siguen", "isCorrect": false}]
+    },
+    {
+      "id": 174,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "seguisteis", "isCorrect": true},
+      {"article": "sigues", "isCorrect": false}]
+    },
+    {
+      "id": 175,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "siguieron", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 176,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "siguieron", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 177,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "siguieron", "isCorrect": true},
+      {"article": "seguís", "isCorrect": false}]
+    },
+    {
+      "id": 178,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "sirvo", "isCorrect": true},
+      {"article": "sirves", "isCorrect": false}]
+    },
+    {
+      "id": 179,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "sirves", "isCorrect": true},
+      {"article": "sirve", "isCorrect": false}]
+    },
+    {
+      "id": 180,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "sirve", "isCorrect": true},
+      {"article": "sirven", "isCorrect": false}]
+    },
+    {
+      "id": 181,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "sirve", "isCorrect": true},
+      {"article": "sirven", "isCorrect": false}]
+    },
+    {
+      "id": 182,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "sirve", "isCorrect": true},
+      {"article": "servimos", "isCorrect": false}]
+    },
+    {
+      "id": 183,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "servimos", "isCorrect": true},
+      {"article": "sirven", "isCorrect": false}]
+    },
+    {
+      "id": 184,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "servís", "isCorrect": true},
+      {"article": "sirves", "isCorrect": false}]
+    },
+    {
+      "id": 185,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "sirven", "isCorrect": true},
+      {"article": "sirve", "isCorrect": false}]
+    },
+    {
+      "id": 186,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "sirven", "isCorrect": true},
+      {"article": "sirvo", "isCorrect": false}]
+    },
+    {
+      "id": 187,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "sirven", "isCorrect": true},
+      {"article": "serví", "isCorrect": false}]
+    },
+    {
+      "id": 188,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "serví", "isCorrect": true},
+      {"article": "sirves", "isCorrect": false}]
+    },
+    {
+      "id": 189,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "serviste", "isCorrect": true},
+      {"article": "sirve", "isCorrect": false}]
+    },
+    {
+      "id": 190,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "sirvió", "isCorrect": true},
+      {"article": "sirven", "isCorrect": false}]
+    },
+    {
+      "id": 191,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "sirvió", "isCorrect": true},
+      {"article": "sirven", "isCorrect": false}]
+    },
+    {
+      "id": 192,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "sirvió", "isCorrect": true},
+      {"article": "servimos", "isCorrect": false}]
+    },
+    {
+      "id": 193,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "servimos", "isCorrect": true},
+      {"article": "servimos", "isCorrect": true}]
+    },
+    {
+      "id": 194,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "servisteis", "isCorrect": true},
+      {"article": "sirves", "isCorrect": false}]
+    },
+    {
+      "id": 195,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "sirvieron", "isCorrect": true},
+      {"article": "sirve", "isCorrect": false}]
+    },
+    {
+      "id": 196,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "sirvieron", "isCorrect": true},
+      {"article": "sirvo", "isCorrect": false}]
+    },
+    {
+      "id": 197,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "sirvieron", "isCorrect": true},
+      {"article": "serví", "isCorrect": false}]
+    },
+    {
+      "id": 198,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "soy", "isCorrect": true},
+      {"article": "sois", "isCorrect": false}]
+    },
+    {
+      "id": 199,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "eres", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 200,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "es", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 201,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "es", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 202,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "es", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 203,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "somos", "isCorrect": true},
+      {"article": "soy", "isCorrect": false}]
+    },
+    {
+      "id": 204,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "sois", "isCorrect": true},
+      {"article": "soy", "isCorrect": false}]
+    },
+    {
+      "id": 205,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "son", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 206,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "son", "isCorrect": true},
+      {"article": "eres", "isCorrect": false}]
+    },
+    {
+      "id": 207,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "son", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 208,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "fui", "isCorrect": true},
+      {"article": "sois", "isCorrect": false}]
+    },
+    {
+      "id": 209,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "fuiste", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 210,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "fue", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 211,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "fue", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 212,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "fue", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 213,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "fuimos", "isCorrect": true},
+      {"article": "soy", "isCorrect": false}]
+    },
+    {
+      "id": 214,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "fuisteis", "isCorrect": true},
+      {"article": "fuiste", "isCorrect": false}]
+    },
+    {
+      "id": 215,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "fueron", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 216,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "fueron", "isCorrect": true},
+      {"article": "fui", "isCorrect": false}]
+    },
+    {
+      "id": 217,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "fueron", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 218,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "estoy", "isCorrect": true},
+      {"article": "sois", "isCorrect": false}]
+    },
+    {
+      "id": 219,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "estás", "isCorrect": true},
+      {"article": "está", "isCorrect": false}]
+    },
+    {
+      "id": 220,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "está", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 221,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "está", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 222,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "está", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 223,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "estamos", "isCorrect": true},
+      {"article": "soy", "isCorrect": false}]
+    },
+    {
+      "id": 224,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "estáis", "isCorrect": true},
+      {"article": "fuiste", "isCorrect": false}]
+    },
+    {
+      "id": 225,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "están", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 226,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "están", "isCorrect": true},
+      {"article": "fui", "isCorrect": false}]
+    },
+    {
+      "id": 227,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "están", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 228,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "estuve", "isCorrect": true},
+      {"article": "estuviste", "isCorrect": false}]
+    },
+    {
+      "id": 229,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "estuviste", "isCorrect": true},
+      {"article": "estuvo", "isCorrect": false}]
+    },
+    {
+      "id": 230,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "estuvo", "isCorrect": true},
+      {"article": "estuve", "isCorrect": false}]
+    },
+    {
+      "id": 231,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "estuvo", "isCorrect": true},
+      {"article": "son", "isCorrect": false}]
+    },
+    {
+      "id": 232,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "estuvo", "isCorrect": true},
+      {"article": "estoy", "isCorrect": false}]
+    },
+    {
+      "id": 233,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "estuvimos", "isCorrect": true},
+      {"article": "estuvieron", "isCorrect": false}]
+    },
+    {
+      "id": 234,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "estuvisteis", "isCorrect": true},
+      {"article": "estuve", "isCorrect": false}]
+    },
+    {
+      "id": 235,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "estuvieron", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
+    },
+    {
+      "id": 236,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "estuvieron", "isCorrect": true},
+      {"article": "fui", "isCorrect": false}]
+    },
+    {
+      "id": 237,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "estuvieron", "isCorrect": true},
+      {"article": "está", "isCorrect": false}]
+    },
+    {
+      "id": 238,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "tengo", "isCorrect": true},
+      {"article": "tenemos", "isCorrect": false}]
+    },
+    {
+      "id": 239,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "tienes", "isCorrect": true},
+      {"article": "tuvo", "isCorrect": false}]
+    },
+    {
+      "id": 240,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "tiene", "isCorrect": true},
+      {"article": "tuvimos", "isCorrect": false}]
+    },
+    {
+      "id": 241,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "tiene", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 242,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "tiene", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 243,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "tenemos", "isCorrect": true},
+      {"article": "tenéis", "isCorrect": false}]
+    },
+    {
+      "id": 244,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "tenéis", "isCorrect": true},
+      {"article": "tiene", "isCorrect": false}]
+    },
+    {
+      "id": 245,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "tienen", "isCorrect": true},
+      {"article": "tiene", "isCorrect": false}]
+    },
+    {
+      "id": 246,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "tienen", "isCorrect": true},
+      {"article": "tengo", "isCorrect": false}]
+    },
+    {
+      "id": 247,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "tienen", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 248,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "tuve", "isCorrect": true},
+      {"article": "tenemos", "isCorrect": false}]
+    },
+    {
+      "id": 249,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "tuviste", "isCorrect": true},
+      {"article": "tuvo", "isCorrect": false}]
+    },
+    {
+      "id": 250,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "tuvo", "isCorrect": true},
+      {"article": "tuvimos", "isCorrect": false}]
+    },
+    {
+      "id": 251,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "tuvo", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 252,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "tuvo", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 253,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "tuvimos", "isCorrect": true},
+      {"article": "estuvieron", "isCorrect": false}]
+    },
+    {
+      "id": 254,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "tuvisteis", "isCorrect": true},
+      {"article": "tuvieron", "isCorrect": false}]
+    },
+    {
+      "id": 255,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "tuvieron", "isCorrect": true},
+      {"article": "tener", "isCorrect": false}]
+    },
+    {
+      "id": 256,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "tuvieron", "isCorrect": true},
+      {"article": "tengo", "isCorrect": false}]
+    },
+    {
+      "id": 257,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "tuvieron", "isCorrect": true},
+      {"article": "tienes", "isCorrect": false}]
+    },
+    {
+      "id": 258,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "hago", "isCorrect": true},
+      {"article": "hiciste", "isCorrect": false}]
+    },
+    {
+      "id": 259,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "haces", "isCorrect": true},
+      {"article": "hace", "isCorrect": false}]
+    },
+    {
+      "id": 260,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "hace", "isCorrect": true},
+      {"article": "hicimos", "isCorrect": false}]
+    },
+    {
+      "id": 261,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "hace", "isCorrect": true},
+      {"article": "hacen", "isCorrect": false}]
+    },
+    {
+      "id": 262,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "hace", "isCorrect": true},
+      {"article": "haces", "isCorrect": false}]
+    },
+    {
+      "id": 263,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "hacemos", "isCorrect": true},
+      {"article": "hizo", "isCorrect": false}]
+    },
+    {
+      "id": 264,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "hacéis", "isCorrect": true},
+      {"article": "hacen", "isCorrect": false}]
+    },
+    {
+      "id": 265,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "hacen", "isCorrect": true},
+      {"article": "haces", "isCorrect": false}]
+    },
+    {
+      "id": 266,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "hacen", "isCorrect": true},
+      {"article": "hago", "isCorrect": false}]
+    },
+    {
+      "id": 267,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "hacen", "isCorrect": true},
+      {"article": "hacéis", "isCorrect": false}]
+    },
+    {
+      "id": 258,
+      "word": "yo",
+      "type": "conjugation",
+      "answer": [{"article": "hice", "isCorrect": true},
+      {"article": "hiciste", "isCorrect": false}]
+    },
+    {
+      "id": 259,
+      "word": "tú",
+      "type": "conjugation",
+      "answer": [{"article": "hiciste", "isCorrect": true},
+      {"article": "hace", "isCorrect": false}]
+    },
+    {
+      "id": 260,
+      "word": "él",
+      "type": "conjugation",
+      "answer": [{"article": "hizo", "isCorrect": true},
+      {"article": "hicimos", "isCorrect": false}]
+    },
+    {
+      "id": 261,
+      "word": "ella",
+      "type": "conjugation",
+      "answer": [{"article": "hizo", "isCorrect": true},
+      {"article": "hacen", "isCorrect": false}]
+    },
+    {
+      "id": 262,
+      "word": "usted",
+      "type": "conjugation",
+      "answer": [{"article": "hizo", "isCorrect": true},
+      {"article": "haces", "isCorrect": false}]
+    },
+    {
+      "id": 263,
+      "word": "nosotros",
+      "type": "conjugation",
+      "answer": [{"article": "hicimos", "isCorrect": true},
+      {"article": "hizo", "isCorrect": false}]
+    },
+    {
+      "id": 264,
+      "word": "vosotros",
+      "type": "conjugation",
+      "answer": [{"article": "hicisteis", "isCorrect": true},
+      {"article": "hacen", "isCorrect": false}]
+    },
+    {
+      "id": 265,
+      "word": "ellos",
+      "type": "conjugation",
+      "answer": [{"article": "hicieron", "isCorrect": true},
+      {"article": "haces", "isCorrect": false}]
+    },
+    {
+      "id": 266,
+      "word": "ellas",
+      "type": "conjugation",
+      "answer": [{"article": "hicieron", "isCorrect": true},
+      {"article": "hago", "isCorrect": false}]
+    },
+    {
+      "id": 267,
+      "word": "ustedes",
+      "type": "conjugation",
+      "answer": [{"article": "hicieron", "isCorrect": true},
+      {"article": "hacéis", "isCorrect": false}]
     }
   ]
-

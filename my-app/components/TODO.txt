@@ -1,13 +1,13 @@
 TODO:
 
-lisää perusverbit + preteritit (vihko) -- 50%
+lisää perusverbit + preteritit (vihko) -- 75%
 alottele lauseen täyttöö
 kierrosmäärän asettaminen itse
 
 
 lisätyt verbit:
 
-ir, ver, poder, dar, saber, poner
+ir, ver, poder, dar, saber, poner, pedir, seguir, serviv, ser, estar, tener, hacer
 
 lausetäyttöidiksii:
 
