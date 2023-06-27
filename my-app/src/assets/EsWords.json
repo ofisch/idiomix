@@ -2068,5 +2068,19 @@
       "type": "sentence",
       "answer": [{"article": "pasó", "isCorrect": true},
       {"article": "pasas", "isCorrect": false}]
+    },
+    {
+      "id": 271,
+      "word": "Hola mamá, este es mi novio.",
+      "type": "sentence",
+      "answer": [{"article": "es", "isCorrect": true},
+      {"article": "soy", "isCorrect": false}]
+    },
+    {
+      "id": 272,
+      "word": "¿De dónde son ustedes?",
+      "type": "sentence",
+      "answer": [{"article": "son", "isCorrect": true},
+      {"article": "es", "isCorrect": false}]
     }
   ]

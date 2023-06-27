@@ -123,7 +123,8 @@ const Game = () => {
           prevWord.word != wordToSelect.word
         ) {
           wordToSelect = esWords[getRandIndex()];
-          let splitString = wordToSelect.word.split(/[!\s_.]+/);
+          let splitString = wordToSelect.word.split(/[.!\s_]+/);
+          console.log('wordToSelect: ', wordToSelect);
 
           for (let i = 0; i < splitString.length; i++) {
             for (let answer of wordToSelect.answer) {
@@ -157,8 +158,10 @@ const Game = () => {
         questionWord.answer[0].isCorrect = questionWord.answer[1].isCorrect;
         questionWord.answer[1].isCorrect = originalIsCorrect;
 
+        /*
         console.log('[0]', questionWord.answer[0].article);
         console.log('[1]', questionWord.answer[1].article);
+        */
       }
 
       prevWord = wordToSelect;
