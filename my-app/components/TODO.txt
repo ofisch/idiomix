@@ -3,7 +3,7 @@ TODO:
 lisää perusverbit + preteritit (vihko) -- TEHTY
 alottele lauseen täyttöö - TEHTY
 lauseentäyttö loppuun - TEHTY
-kierrosmäärän asettaminen itse
+kierrosmäärän asettaminen itse - TEHTY
 
 
 lisätyt verbit:

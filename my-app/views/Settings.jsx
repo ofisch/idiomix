@@ -11,6 +11,7 @@ import {
   Paper,
   Select,
   Slide,
+  TextField,
   Typography,
   createTheme,
 } from '@mui/material';
@@ -29,6 +30,7 @@ const Settings = () => {
   let [roundsInput, setRoundsInput] = useState(10);
   let [speedInput, setSpeedInput] = useState(1000);
   let [typeInput, setTypeInput] = useState('all');
+  let [textFieldInput, setTextFieldInput] = useState(50);
 
   const handleRoundsInput = (e) => {
     setRoundsInput(e.target.value);
@@ -43,6 +45,11 @@ const Settings = () => {
   const handleTypeInput = (e) => {
     setTypeInput(e.target.value);
     selectType(e.target.value);
+  };
+
+  const handleTextField = (e) => {
+    setTextFieldInput(e.target.value);
+    handleRoundsInput(e);
   };
 
   return (
@@ -130,6 +137,20 @@ const Settings = () => {
                     <MenuItem value={10}>10</MenuItem>
                     <MenuItem value={20}>20</MenuItem>
                     <MenuItem value={30}>30</MenuItem>
+
+                    <TextField
+                      sx={{paddingLeft: 1}}
+                      type="number"
+                      value={textFieldInput}
+                      id="outlined-basic"
+                      placeholder="50"
+                      variant="outlined"
+                      onChange={handleTextField}
+                    >
+                      <MenuItem value={textFieldInput}>
+                        {textFieldInput}
+                      </MenuItem>
+                    </TextField>
                   </Select>
                 </FormControl>
                 <FormControl fullWidth>
