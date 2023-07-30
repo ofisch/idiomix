@@ -14,6 +14,7 @@ import {
   createTheme,
   Button,
   CssBaseline,
+  Popover,
 } from '@mui/material';
 import {themeOptions} from '../src/theme/themeOptions';
 import {selectLang} from '../hooks/infoHooks';
@@ -25,6 +26,19 @@ const Start = () => {
   const handleLangSelect = (select) => {
     setLang((lang = select));
   };
+
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handlePopover = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'popover' : undefined;
 
   return (
     <>
@@ -99,10 +113,13 @@ const Start = () => {
                 </Grid>
                 <Grid sx={{width: '60px'}}>
                   <Button
+                    /*
                     onClick={() => {
                       selectLang('se');
-                      navigate('/game');
+                      handlePopover(event);
                     }}
+                    */
+                    onClick={handlePopover}
                   >
                     <img
                       style={{maxWidth: '100%', maxHeight: '100%'}}
@@ -110,6 +127,17 @@ const Start = () => {
                       alt="flag of Sweden"
                     />
                   </Button>
+                  <Popover
+                    id={id}
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handlePopoverClose}
+                    anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+                  >
+                    <Typography component="p" variant="p" sx={{p: 2}}>
+                      kesken :(
+                    </Typography>
+                  </Popover>
                 </Grid>
               </Grid>
               <Typography component="p" variant="p" sx={{scale: '0.7'}}>
